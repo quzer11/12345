@@ -11,41 +11,35 @@
   --bg:#09090b;--surface:#111115;--surface2:#18181b;
   --border:#27272a;--border2:#3f3f46;
   --text:#e4e4e7;--muted:#71717a;--muted2:#52525b;
-  --blue:#60a5fa;--blue-d:#1d3557;
-  --green:#4ade80;--green-d:#14532d;
-  --red:#f87171;--red-d:#450a0a;
-  --yellow:#facc15;--yellow-d:#422006;
-  --purple:#c084fc;--teal:#2dd4bf;--orange:#fb923c;
+  --blue:#60a5fa;--green:#4ade80;--red:#f87171;
+  --yellow:#facc15;--purple:#c084fc;--teal:#2dd4bf;--orange:#fb923c;
 }
 .reveal{background:var(--bg);font-family:'PingFang SC','Microsoft YaHei','Segoe UI',sans-serif;color:var(--text)}
 .reveal .slides{text-align:left}
 .reveal .slides>section{padding:0}
-.reveal h1,.reveal h2,.reveal h3,.reveal h4{font-weight:800;text-transform:none;letter-spacing:-.02em;color:var(--text);line-height:1.15}
+.reveal h1,.reveal h2,.reveal h3{font-weight:800;text-transform:none;letter-spacing:-.02em;color:var(--text);line-height:1.15}
 .reveal h1{font-size:2.6em}
 .reveal h2{font-size:1.5em}
-.reveal h3{font-size:.95em;color:var(--muted);font-weight:500}
+.reveal h3{font-size:.9em;color:var(--muted);font-weight:500}
 .reveal p,.reveal li{color:var(--text);line-height:1.6}
 .reveal ul{padding-left:1.3em}
 .reveal li{margin:5px 0;font-size:.82em}
-.reveal pre{width:100%;box-shadow:none;border:1px solid var(--border);border-radius:10px;margin:7px 0;background:#0d0d10}
-.reveal pre code{font-size:.68em;line-height:1.6;padding:14px 18px;font-family:'JetBrains Mono','Fira Code',monospace}
+.reveal pre{width:100%;box-shadow:none;border:1px solid var(--border);border-radius:10px;margin:6px 0;background:#0d0d10}
+.reveal pre code{font-size:.68em;line-height:1.6;padding:13px 17px;font-family:'JetBrains Mono','Fira Code',monospace}
 .reveal .progress{color:var(--blue)}
 .reveal .controls button{color:var(--muted)}
 .reveal .controls button:hover{color:var(--blue)}
-.reveal .slide-number{background:transparent;color:var(--muted2);font-size:.48em;right:16px;bottom:12px}
+.reveal .slide-number{background:transparent;color:var(--muted2);font-size:.46em;right:14px;bottom:10px}
 
-/* ── ANIMATIONS ── */
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 @keyframes slideR{from{opacity:0;transform:translateX(-26px)}to{opacity:1;transform:translateX(0)}}
 @keyframes lineIn{from{width:0}to{width:100%}}
-@keyframes glow{0%,100%{box-shadow:0 0 0 0 transparent}50%{box-shadow:0 0 24px rgba(96,165,250,.2)}}
 @keyframes cursor{0%,100%{opacity:1}50%{opacity:0}}
 
 .reveal .fragment{opacity:0;transition:opacity .4s ease,transform .4s ease;transform:translateY(10px)}
 .reveal .fragment.visible{opacity:1;transform:translateY(0)}
 
-/* stagger */
 .stg>*{opacity:0}
 .stg.on>*:nth-child(1){animation:fadeUp .5s .04s ease forwards}
 .stg.on>*:nth-child(2){animation:fadeUp .5s .14s ease forwards}
@@ -54,178 +48,169 @@
 .stg.on>*:nth-child(5){animation:fadeUp .5s .44s ease forwards}
 .stg.on>*:nth-child(6){animation:fadeUp .5s .54s ease forwards}
 
-/* ── LAYOUT ── */
-.sb{padding:28px 46px 16px;height:100%}
-.g2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
-.gap{height:10px}
+.sb{padding:26px 44px 14px;height:100%}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:11px}
+.g4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px}
+.gap{height:9px}
 
-/* ── CARDS ── */
-.card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px 16px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:11px;padding:13px 15px}
 .card-b{border-color:#2a4a7a;background:#0c1a2e}
 .card-g{border-color:#145228;background:#0d1f15}
 .card-r{border-color:#7f1d1d;background:#180808}
 .card-y{border-color:#7c4a0e;background:#191200}
 .card-p{border-color:#5b21b6;background:#130d24}
 .card-t{border-color:#0d5c55;background:#071a18}
+.card-o{border-color:#9a3412;background:#1a0c06}
 
-/* ── PILL ── */
-.pill{display:inline-block;padding:2px 9px;border-radius:20px;font-size:.52em;font-weight:700;vertical-align:middle;margin-left:7px;position:relative;top:-2px}
+.pill{display:inline-block;padding:2px 9px;border-radius:20px;font-size:.51em;font-weight:700;vertical-align:middle;margin-left:6px;position:relative;top:-2px}
 .pill-b{background:#1d3557;color:var(--blue);border:1px solid #3b6ea6}
-.pill-r{background:var(--red-d);color:var(--red);border:1px solid #7f1d1d}
-.pill-g{background:var(--green-d);color:var(--green);border:1px solid #145228}
-.pill-y{background:var(--yellow-d);color:var(--yellow);border:1px solid #854d0e}
+.pill-r{background:#450a0a;color:var(--red);border:1px solid #7f1d1d}
+.pill-g{background:#14532d;color:var(--green);border:1px solid #145228}
+.pill-y{background:#422006;color:var(--yellow);border:1px solid #854d0e}
 .pill-p{background:#2e1065;color:var(--purple);border:1px solid #6b21a8}
 .pill-t{background:#0d3d38;color:var(--teal);border:1px solid #0d5c55}
 .pill-o{background:#431407;color:var(--orange);border:1px solid #9a3412}
 
-/* ── TIP BOX ── */
-.tip{background:var(--surface);border-left:3px solid var(--blue);border-radius:0 8px 8px 0;padding:9px 13px;font-size:.74em;color:var(--muted);margin-top:8px}
-.tip b{color:var(--blue)}
-.tip.r{border-color:var(--red)}.tip.r b{color:var(--red)}
+.tip{background:var(--surface);border-left:3px solid var(--blue);border-radius:0 8px 8px 0;padding:8px 12px;font-size:.73em;color:var(--muted);margin-top:7px}
+.tip b{color:var(--blue)}.tip.r{border-color:var(--red)}.tip.r b{color:var(--red)}
 .tip.g{border-color:var(--green)}.tip.g b{color:var(--green)}
 .tip.y{border-color:var(--yellow)}.tip.y b{color:var(--yellow)}
 
-/* ── TABLE ── */
-.t{width:100%;border-collapse:collapse;font-size:.71em}
+.t{width:100%;border-collapse:collapse;font-size:.7em}
 .t th{background:#18181b;color:var(--muted);padding:7px 11px;text-align:left;border:1px solid var(--border);font-weight:600}
 .t td{padding:7px 11px;border:1px solid var(--border);color:var(--text)}
 .t tr:nth-child(even) td{background:#111115}
 
-/* ── BADGE ── */
-.badge{position:absolute;top:11px;right:16px;font-size:.48em;color:var(--muted);background:var(--surface);border:1px solid var(--border);padding:3px 9px;border-radius:6px}
+.badge{position:absolute;top:10px;right:15px;font-size:.46em;color:var(--muted);background:var(--surface);border:1px solid var(--border);padding:2px 8px;border-radius:5px}
 
-/* ── COLORS ── */
-.cb{color:var(--blue)}.cg{color:var(--green)}.cr{color:var(--red)}.cy{color:var(--yellow)}.cp{color:var(--purple)}.ct{color:var(--teal)}.co{color:var(--orange)}.cm{color:var(--muted)}
-code.il{background:#1a1a1f;color:var(--blue);padding:1px 5px;border-radius:4px;font-family:'JetBrains Mono','Fira Code',monospace;font-size:.88em}
-.bold{font-weight:700}.sm{font-size:.74em;color:var(--muted)}
+.cb{color:var(--blue)}.cg{color:var(--green)}.cr{color:var(--red)}.cy{color:var(--yellow)}
+.cp{color:var(--purple)}.ct{color:var(--teal)}.co{color:var(--orange)}.cm{color:var(--muted)}
+code.il{background:#1a1a1f;color:var(--blue);padding:1px 5px;border-radius:4px;font-family:'JetBrains Mono','Fira Code',monospace;font-size:.87em}
+.bold{font-weight:700}.sm{font-size:.73em;color:var(--muted)}
 
-/* ── VS ROW ── */
-.vs{display:grid;grid-template-columns:1fr 28px 1fr;gap:12px;align-items:start}
-.vs-mid{text-align:center;font-size:.7em;font-weight:700;color:var(--border2);padding-top:40px}
+.vs{display:grid;grid-template-columns:1fr 26px 1fr;gap:11px;align-items:start}
+.vs-mid{text-align:center;font-size:.68em;font-weight:700;color:var(--border2);padding-top:38px}
 
-/* ── SECTION DIVIDER ── */
 .sec{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;height:100%;padding:0 80px;position:relative;overflow:hidden}
-.sec-line{width:0;height:3px;border-radius:2px;margin-bottom:22px;animation:lineIn .65s .1s ease forwards}
-.sec-line-b{background:linear-gradient(90deg,var(--blue),transparent)}
-.sec-line-t{background:linear-gradient(90deg,var(--teal),transparent)}
-.sec-line-p{background:linear-gradient(90deg,var(--purple),transparent)}
+.sec-line{width:0;height:3px;border-radius:2px;margin-bottom:20px;animation:lineIn .65s .1s ease forwards}
 .sec-num{font-size:9em;font-weight:900;color:#141418;position:absolute;right:-10px;top:50%;transform:translateY(-50%);line-height:1}
 .sec h1{font-size:3.2em;font-weight:900;opacity:0;animation:slideR .6s .2s cubic-bezier(.22,.68,0,1.2) forwards}
-.sec h3{opacity:0;animation:fadeIn .5s .5s ease forwards;font-size:.95em;margin-top:8px}
+.sec h3{opacity:0;animation:fadeIn .5s .5s ease forwards;font-size:.9em;margin-top:7px}
 
-/* ── TITLE ── */
 .title{display:flex;flex-direction:column;justify-content:center;align-items:center;height:100%;text-align:center;position:relative;overflow:hidden}
 .title::before{content:'';position:absolute;width:700px;height:700px;background:radial-gradient(circle,rgba(96,165,250,.06) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%)}
-.title h1{font-size:3em;opacity:0;animation:fadeUp .7s .1s ease forwards;background:linear-gradient(135deg,#e4e4e7 20%,#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.title h3{font-size:.9em;margin-top:12px;opacity:0;animation:fadeUp .6s .3s ease forwards}
+.title h1{font-size:2.9em;opacity:0;animation:fadeUp .7s .1s ease forwards;background:linear-gradient(135deg,#e4e4e7 20%,#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.title h3{font-size:.88em;margin-top:10px;opacity:0;animation:fadeUp .6s .3s ease forwards}
 
-/* h2 with underline */
-h2.ul{border-bottom:1px solid var(--border);padding-bottom:9px;margin-bottom:18px}
+h2.ul{border-bottom:1px solid var(--border);padding-bottom:8px;margin-bottom:16px}
 
-/* ── TERMINAL MOCKUP ── */
-.term{background:#0d0d10;border:1px solid #2a2a30;border-radius:12px;overflow:hidden;box-shadow:0 16px 50px rgba(0,0,0,.5)}
-.term-bar{background:#1e1e22;padding:9px 14px;display:flex;align-items:center;gap:7px}
-.term-dot{width:12px;height:12px;border-radius:50%;flex-shrink:0}
+/* terminal */
+.term{background:#0d0d10;border:1px solid #2a2a30;border-radius:11px;overflow:hidden;box-shadow:0 14px 40px rgba(0,0,0,.5)}
+.term-bar{background:#1e1e22;padding:8px 13px;display:flex;align-items:center;gap:6px}
+.term-dot{width:11px;height:11px;border-radius:50%;flex-shrink:0}
 .dr{background:#ff5f57}.dy{background:#febc2e}.dg{background:#28c840}
-.term-title{font-size:.62em;color:#555;margin:0 auto;font-family:monospace}
-.term-body{padding:14px 18px;font-family:'JetBrains Mono','Fira Code',monospace;font-size:.65em;line-height:1.65;color:#d4d4d4}
-.tp{color:#4ade80}  /* prompt */
-.tc{color:#e4e4e7}  /* command */
-.to{color:#71717a}  /* output */
-.tai{color:#60a5fa} /* AI response */
-.ty{color:#facc15}  /* highlight */
-.tr{color:#f87171}  /* error */
-.tg{color:#4ade80}  /* success */
-.tt{color:#2dd4bf}  /* teal accent */
-.tcursor{display:inline-block;width:8px;height:1em;background:#60a5fa;vertical-align:text-bottom;animation:cursor 1s infinite}
+.term-title{font-size:.6em;color:#555;margin:0 auto;font-family:monospace}
+.term-body{padding:13px 17px;font-family:'JetBrains Mono','Fira Code',monospace;font-size:.63em;line-height:1.65;color:#d4d4d4}
+.tp{color:#4ade80}.tc{color:#e4e4e7}.to{color:#71717a}.tai{color:#60a5fa}
+.ty{color:#facc15}.tr{color:#f87171}.tg{color:#4ade80}.tt{color:#2dd4bf}
+.tcursor{display:inline-block;width:7px;height:.85em;background:#60a5fa;vertical-align:text-bottom;animation:cursor 1s infinite}
 
-/* ── STEP LIST ── */
-.steps{list-style:none;padding:0;counter-reset:steps}
-.steps li{counter-increment:steps;display:flex;align-items:flex-start;gap:12px;padding:9px 0;border-bottom:1px solid var(--border);font-size:.8em}
+/* steps */
+.steps{list-style:none;padding:0;counter-reset:s}
+.steps li{counter-increment:s;display:flex;align-items:flex-start;gap:11px;padding:8px 0;border-bottom:1px solid var(--border);font-size:.79em}
 .steps li:last-child{border:none}
-.steps li::before{content:counter(steps);background:var(--blue);color:#000;font-weight:900;font-size:.75em;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.steps li::before{content:counter(s);background:var(--blue);color:#000;font-weight:900;font-size:.72em;width:21px;height:21px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
 
-/* ── FEATURE GRID ── */
-.feat{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.feat-item{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px 14px;display:flex;gap:10px;align-items:flex-start}
-.feat-icon{font-size:1.3em;flex-shrink:0;line-height:1.2}
-.feat-label{font-size:.78em;font-weight:700;color:var(--text)}
-.feat-desc{font-size:.7em;color:var(--muted);margin-top:3px;line-height:1.5}
+/* feature */
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.feat-item{background:var(--surface);border:1px solid var(--border);border-radius:9px;padding:11px 13px;display:flex;gap:9px}
+.feat-icon{font-size:1.2em;flex-shrink:0}
+.feat-label{font-size:.77em;font-weight:700}
+.feat-desc{font-size:.68em;color:var(--muted);margin-top:2px;line-height:1.5}
 
-/* ── STAR BADGE ── */
-.star-badge{background:linear-gradient(135deg,#422006,#7c4a0e);border:1px solid var(--yellow);color:var(--yellow);font-size:.65em;font-weight:700;padding:4px 12px;border-radius:20px;display:inline-block}
+.star-badge{background:linear-gradient(135deg,#422006,#7c4a0e);border:1px solid var(--yellow);color:var(--yellow);font-size:.62em;font-weight:700;padding:3px 11px;border-radius:20px;display:inline-block}
 
-/* ── MODE CARD ── */
-.mode-card{border-radius:10px;padding:14px 16px;border:1px solid var(--border)}
+/* error box */
+.err-box{background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:8px}
+.err-name{background:#3d1010;padding:6px 14px;font-size:.72em;font-weight:800;color:var(--red);font-family:monospace}
+.err-body{padding:8px 14px;font-size:.73em;color:var(--muted);line-height:1.6}
+.err-body .cause{color:var(--text);font-weight:600}
+.err-body .fix{color:var(--green);margin-top:3px}
 
-/* ── INSTALL BLOCK ── */
-.install-block{background:#070710;border:1px solid var(--border2);border-radius:10px;padding:14px 18px}
-.install-label{font-size:.6em;font-weight:700;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+/* project card */
+.proj{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px 14px}
+.proj-name{font-size:.88em;font-weight:800;margin-bottom:4px}
+.proj-stars{font-size:.62em;color:var(--yellow);margin-bottom:6px}
+.proj-desc{font-size:.72em;color:var(--muted);line-height:1.5}
 
-/* ── SCENARIO CARD ── */
-.scenario{background:var(--surface);border-radius:10px;border:1px solid var(--border);overflow:hidden}
-.scenario-q{background:#18181b;padding:9px 14px;font-size:.75em;font-weight:700;color:var(--text);border-bottom:1px solid var(--border)}
-.scenario-a{padding:9px 14px;font-size:.72em;color:var(--muted);line-height:1.6}
+/* mode cards */
+.mode-card{border-radius:10px;padding:13px 15px;border:1px solid var(--border)}
 
-/* ── COMPARE TABLE ── */
-.cmp{width:100%;border-collapse:collapse;font-size:.73em}
-.cmp th{padding:9px 14px;text-align:left;border:1px solid var(--border);font-weight:700}
+/* cmp table */
+.cmp{width:100%;border-collapse:collapse;font-size:.71em}
+.cmp th{padding:8px 13px;text-align:left;border:1px solid var(--border);font-weight:700}
 .cmp th:first-child{background:#18181b;color:var(--muted)}
 .cmp th.tui{background:#0d3d38;color:var(--teal)}
 .cmp th.oc{background:#0c1a2e;color:var(--blue)}
-.cmp td{padding:9px 14px;border:1px solid var(--border);color:var(--text)}
+.cmp td{padding:8px 13px;border:1px solid var(--border);color:var(--text)}
 .cmp td:first-child{color:var(--muted);font-weight:600;background:#111115}
 .cmp tr:nth-child(even) td:not(:first-child){background:#0d0d10}
+
+/* scenario */
+.scenario{background:var(--surface);border-radius:10px;border:1px solid var(--border);overflow:hidden}
+.scenario-q{background:#18181b;padding:8px 13px;font-size:.74em;font-weight:700;border-bottom:1px solid var(--border)}
+.scenario-a{padding:8px 13px;font-size:.71em;color:var(--muted);line-height:1.6}
+
+/* price */
+.price-row{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--border);font-size:.78em}
+.price-bar{height:8px;border-radius:4px;background:var(--blue);min-width:4px}
 </style>
 </head>
 <body>
 <div class="reveal"><div class="slides">
 
-
-<!-- ══════════════════ TITLE ══════════════════ -->
+<!-- ══ TITLE ══ -->
 <section>
 <div class="title">
-  <div class="sec-num" style="font-size:14em;color:#111115;right:-40px">PY</div>
+  <div style="font-size:13em;font-weight:900;color:#111115;position:absolute;right:-30px;top:50%;transform:translateY(-50%)">PY</div>
   <h1>Python — 新知识点</h1>
-  <h3 class="cm">集合 / 数据类型分类 / 列表进阶 / 循环 / AI 工具</h3>
+  <h3 class="cm">约 36 张幻灯片 &nbsp;·&nbsp; 预计 60 分钟</h3>
 </div>
 </section>
 
-
-<!-- ══════════════════ SEC 01 数据类型 ══════════════════ -->
+<!-- ══ SEC 01 ══ -->
 <section>
 <div class="sec">
-  <div class="sec-line sec-line-b"></div>
+  <div class="sec-line" style="background:linear-gradient(90deg,var(--blue),transparent)"></div>
   <h1>数据类型分类</h1>
-  <h3>可变 vs 不可变 — 序列 vs 非序列</h3>
+  <h3>可变 / 不可变 / 序列 / 非序列</h3>
   <div class="sec-num">01</div>
 </div>
 </section>
 
 <section>
 <div class="sb">
-<div class="badge">数据类型 / 可变性</div>
+<div class="badge">数据类型</div>
 <h2 class="ul">可变 vs 不可变</h2>
 <div class="g2">
   <div class="card card-r">
-    <div class="cr bold sm" style="margin-bottom:10px">不可变类型 — 创建后无法修改</div>
+    <div class="cr bold sm" style="margin-bottom:9px">不可变 — 创建后无法修改</div>
     <ul>
-      <li><span class="cb bold">int</span> &nbsp; 整数 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="il">x = 10</code></li>
-      <li><span class="cb bold">float</span> &nbsp; 浮点数 &nbsp;&nbsp; <code class="il">x = 3.14</code></li>
-      <li><span class="cb bold">str</span> &nbsp; 字符串 &nbsp;&nbsp;&nbsp; <code class="il">s = "hello"</code></li>
-      <li><span class="cb bold">tuple</span> &nbsp; 元组 &nbsp;&nbsp;&nbsp;&nbsp; <code class="il">t = (1,2)</code></li>
+      <li><span class="cb bold">int / float</span> &nbsp; 数字</li>
+      <li><span class="cb bold">str</span> &nbsp; 字符串 &nbsp;<code class="il">s="hello"</code></li>
+      <li><span class="cb bold">tuple</span> &nbsp; 元组 &nbsp;<code class="il">t=(1,2)</code></li>
     </ul>
-    <div class="tip r" style="margin-top:10px">不可变类型 <b>可以</b> 作为字典的 key</div>
+    <div class="tip r" style="margin-top:9px">不可变类型 <b>才能</b> 作为字典的 key</div>
   </div>
   <div class="card card-g">
-    <div class="cg bold sm" style="margin-bottom:10px">可变类型 — 创建后可以修改</div>
+    <div class="cg bold sm" style="margin-bottom:9px">可变 — 创建后可以修改</div>
     <ul>
-      <li><span class="cb bold">list</span> &nbsp; 列表 &nbsp;&nbsp;&nbsp;&nbsp; <code class="il">[1, 2, 3]</code></li>
-      <li><span class="cb bold">dict</span> &nbsp; 字典 &nbsp;&nbsp;&nbsp;&nbsp; <code class="il">{"a": 1}</code></li>
-      <li><span class="cb bold">set</span> &nbsp;&nbsp; 集合 &nbsp;&nbsp;&nbsp;&nbsp; <code class="il">{1, 2, 3}</code></li>
+      <li><span class="cb bold">list</span> &nbsp; 列表 &nbsp;<code class="il">[1,2,3]</code></li>
+      <li><span class="cb bold">dict</span> &nbsp; 字典 &nbsp;<code class="il">{"a":1}</code></li>
+      <li><span class="cb bold">set</span> &nbsp;&nbsp; 集合 &nbsp;<code class="il">{1,2,3}</code></li>
     </ul>
-    <div class="tip r" style="margin-top:10px">可变类型 <b>不能</b> 作为字典的 key</div>
+    <div class="tip r" style="margin-top:9px">可变类型 <b>不能</b> 作为字典的 key</div>
   </div>
 </div>
 <div class="gap"></div>
@@ -234,23 +219,22 @@ h2.ul{border-bottom:1px solid var(--border);padding-bottom:9px;margin-bottom:18p
     <tr><th>类型</th><th>可变</th><th>有序</th><th>可重复</th><th>下标索引</th><th>作 dict key</th></tr>
     <tr><td><b>list</b></td><td class="cg">是</td><td class="cg">是</td><td class="cg">是</td><td class="cg">是</td><td class="cr">否</td></tr>
     <tr><td><b>tuple</b></td><td class="cr">否</td><td class="cg">是</td><td class="cg">是</td><td class="cg">是</td><td class="cg">是</td></tr>
-    <tr><td><b>dict</b></td><td class="cg">是</td><td class="cm">无序</td><td>key 唯一</td><td>key 访问</td><td>—</td></tr>
+    <tr><td><b>dict</b></td><td class="cg">是</td><td class="cm">无序</td><td>key唯一</td><td>key访问</td><td>—</td></tr>
     <tr><td><b>set</b></td><td class="cg">是</td><td class="cr">无序</td><td class="cr">否</td><td class="cr">否</td><td>—</td></tr>
     <tr><td><b>str</b></td><td class="cr">否</td><td class="cg">是</td><td class="cg">是</td><td class="cg">是</td><td class="cg">是</td></tr>
   </table>
 </div>
-<div class="tip fragment">
-  <b>单选：</b>Python 序列类型不包括？ — 字符串、元组、列表都是序列，<b class="cr">字典</b>不是序列类型<br>
-  <b>单选：</b>不是 Python 数据类型名的是？ — list/str/tuple/dict 都是，<b class="cr">实数</b>不是 Python 类型名
+<div class="tip fragment r">
+  <b>单选：</b>Python序列类型不包括 &rarr; <b>字典</b>&nbsp;&nbsp;
+  <b>单选：</b>不是Python类型名的是 &rarr; <b>实数</b>
 </div>
 </div>
 </section>
 
-
-<!-- ══════════════════ SEC 02 集合 ══════════════════ -->
+<!-- ══ SEC 02 集合 ══ -->
 <section>
 <div class="sec">
-  <div class="sec-line sec-line-b"></div>
+  <div class="sec-line" style="background:linear-gradient(90deg,var(--blue),transparent)"></div>
   <h1>集合 Set</h1>
   <h3>无序 / 去重 / 并集交集</h3>
   <div class="sec-num">02</div>
@@ -259,8 +243,8 @@ h2.ul{border-bottom:1px solid var(--border);padding-bottom:9px;margin-bottom:18p
 
 <section>
 <div class="sb">
-<div class="badge">集合 / 基础</div>
-<h2 class="ul">集合 — 无序无重复</h2>
+<div class="badge">集合</div>
+<h2 class="ul">集合基础</h2>
 <div class="g2">
 <div>
 <pre><code class="language-python"># 创建集合
@@ -270,55 +254,52 @@ s2 = set([1, 2, 3])
 # 自动去重
 a = set([1, 2, 3, 3, 4, 4, 4])
 print(a)        # {1, 2, 3, 4}
-print(sum(a))   # 10  ← 只计算一次每个值
+print(sum(a))   # 10
 
 # 集合运算
 s1 = {1, 2, 3, 4}
 s2 = {3, 4, 5, 6}
-
 print(s1 | s2)              # {1,2,3,4,5,6}  并集
-print(s1 & s2)              # {3, 4}          交集
-print(s1.intersection(s2))  # {3, 4}  与上面等价</code></pre>
+print(s1 & s2)              # {3,4}           交集
+print(s1.intersection(s2))  # {3,4}  等价</code></pre>
 </div>
 <div class="stg">
   <div class="card card-r">
-    <div class="cr bold sm">核心陷阱</div>
+    <div class="cr bold sm">最大陷阱</div>
     <div class="gap"></div>
     <div class="vs" style="grid-template-columns:1fr 20px 1fr;align-items:center">
       <div style="text-align:center">
-        <code class="il" style="font-size:1.1em">set()</code>
-        <div class="cg sm" style="margin-top:6px">空集合</div>
+        <code class="il" style="font-size:1.05em">set()</code>
+        <div class="cg sm" style="margin-top:5px">空集合</div>
       </div>
       <div class="vs-mid" style="padding-top:0">vs</div>
       <div style="text-align:center">
-        <code class="il" style="font-size:1.1em">{}</code>
-        <div class="cr sm" style="margin-top:6px">空字典！不是集合！</div>
+        <code class="il" style="font-size:1.05em">{}</code>
+        <div class="cr sm" style="margin-top:5px">空字典，不是集合！</div>
       </div>
     </div>
   </div>
-  <div class="card" style="margin-top:10px">
-    <div class="bold cb sm" style="margin-bottom:7px">集合不支持下标</div>
+  <div class="card" style="margin-top:9px">
+    <div class="cb bold sm" style="margin-bottom:6px">集合不支持下标</div>
     <pre style="margin:0"><code class="language-python">s = {1, 2, 3}
 # s[0]  ← TypeError!
 # 集合无序，没有"第一个"</code></pre>
   </div>
-  <div class="tip r" style="margin-top:8px">
+  <div class="tip r" style="margin-top:7px">
     判断：集合是有序的 &rarr; <b>错</b>&nbsp;&nbsp;
-    判断：set()表示空集合 &rarr; <b class="cg">对</b><br>
-    单选：set([1,2,3,3,4,4,4])的sum &rarr; <b class="cg">10</b>
+    判断：set()表示空集合 &rarr; <b class="cg">对</b>
   </div>
 </div>
 </div>
 </div>
 </section>
 
-
-<!-- ══════════════════ SEC 03 列表进阶 ══════════════════ -->
+<!-- ══ SEC 03 列表进阶 ══ -->
 <section>
 <div class="sec">
-  <div class="sec-line sec-line-b"></div>
+  <div class="sec-line" style="background:linear-gradient(90deg,var(--blue),transparent)"></div>
   <h1>列表进阶</h1>
-  <h3>sort vs sorted / 切片 / 推导式</h3>
+  <h3>sort vs sorted / 切片 / 推导式 / 嵌套列表</h3>
   <div class="sec-num">03</div>
 </div>
 </section>
@@ -329,30 +310,25 @@ print(s1.intersection(s2))  # {3, 4}  与上面等价</code></pre>
 <h2 class="ul">sort() vs sorted() <span class="pill pill-r">高频</span></h2>
 <div class="vs">
   <div>
-    <div class="cr bold sm" style="margin-bottom:7px">sort() — 修改原列表</div>
+    <div class="cr bold sm" style="margin-bottom:7px">sort() — 修改原列表，返回 None</div>
     <pre><code class="language-python">a = [5, 1, 3, 4]
-
 a.sort()
 print(a)  # [1, 3, 4, 5]
 
 a.sort(reverse=True)
 print(a)  # [5, 4, 3, 1]
 
-# 返回值是 None
 x = a.sort()
-print(x)  # None</code></pre>
+print(x)  # None  ← 无返回值！</code></pre>
   </div>
   <div class="vs-mid">VS</div>
   <div>
-    <div class="cg bold sm" style="margin-bottom:7px">sorted() — 返回新列表</div>
+    <div class="cg bold sm" style="margin-bottom:7px">sorted() — 不改原列表，返回新列表</div>
     <pre><code class="language-python">a = [5, 1, 3, 4]
-
 b = sorted(a, reverse=True)
 print(b)  # [5, 4, 3, 1]
 print(a)  # [5, 1, 3, 4]
-#              ↑ 没有变化！
-
-# sorted() 有返回值：新列表</code></pre>
+#              ↑ 原来没变！</code></pre>
   </div>
 </div>
 <div class="gap"></div>
@@ -362,13 +338,12 @@ print(a)  # [5, 1, 3, 4]
       <tr><th></th><th>sort()</th><th>sorted()</th></tr>
       <tr><td>改原列表</td><td class="cr">是</td><td class="cg">否</td></tr>
       <tr><td>返回值</td><td class="cr">None</td><td class="cg">新列表</td></tr>
-      <tr><td>降序参数</td><td colspan="2" style="text-align:center">reverse=True</td></tr>
+      <tr><td>降序</td><td colspan="2" style="text-align:center">reverse=True</td></tr>
     </table>
   </div>
   <div class="tip r">
     <b>判断：</b>sort()与sorted()都会改变原列表 &rarr; <b>错</b><br>
-    <b>判断：</b>sort()和sorted()都会改变位置 &rarr; <b>错</b>（sorted不改）<br>
-    <b>单选：</b>sorted([5,1,3,4], reverse=True) &rarr; <b class="cg">[5,4,3,1]</b>
+    <b>单选：</b>sorted([5,1,3,4],reverse=True) &rarr; <b class="cg">[5,4,3,1]</b>
   </div>
 </div>
 </div>
@@ -378,37 +353,37 @@ print(a)  # [5, 1, 3, 4]
 <div class="sb">
 <div class="badge">列表 / 切片</div>
 <h2 class="ul">切片 s[start : stop : step]</h2>
-<pre><code class="language-python">s = ["seashell", "gold", "pink", "brown", "purple", "tomato"]
-#        0           1      2       3         4          5
-#       -6          -5     -4      -3        -2         -1
+<pre><code class="language-python">s = ["seashell","gold","pink","brown","purple","tomato"]
+#        0          1      2      3        4         5
+#       -6         -5     -4     -3       -2        -1
 
-print(s[1:4:2])  # ['gold', 'brown']  ← 下标 1, 3（步长2）
-print(s[1:3])    # ['gold', 'pink']   ← 下标 1, 2
-print(s[::-1])   # 倒序整个列表</code></pre>
+print(s[1:4:2])  # ['gold', 'brown']  ← 下标 1,3
+print(s[1:3])    # ['gold', 'pink']   ← 下标 1,2
+print(s[::-1])   # 整个列表倒序</code></pre>
 <div class="gap"></div>
 <div class="g3 stg">
   <div class="card">
-    <div class="cb bold sm">stop 不包含该位置</div>
-    <pre style="margin-top:8px"><code class="language-python">s[1:4]
-# 取下标 1,2,3
+    <div class="cb bold sm">stop 不含该位置</div>
+    <pre style="margin-top:7px"><code class="language-python">s[1:4]
+# 取 1,2,3
 # 不含 4</code></pre>
   </div>
   <div class="card">
     <div class="cb bold sm">step 控制步长</div>
-    <pre style="margin-top:8px"><code class="language-python">lst = [1,2,3,4,5,6]
-lst[::2]   # [1,3,5]
-# 下标 0,2,4</code></pre>
+    <pre style="margin-top:7px"><code class="language-python">lst = [1,2,3,4,5,6]
+lst[::2]
+# [1,3,5] ← 下标0,2,4</code></pre>
   </div>
   <div class="card">
     <div class="cb bold sm">负数切片</div>
-    <pre style="margin-top:8px"><code class="language-python">lst[0:-2]
+    <pre style="margin-top:7px"><code class="language-python">lst[0:-2]
 # [1,2,3,4]
 # 去掉最后两个</code></pre>
   </div>
 </div>
 <div class="tip fragment">
-  <b>判断：</b>lst[::2] 功能是将下标0和偶数下标的元素存入 &rarr; <b class="cg">对</b>&nbsp;&nbsp;
-  <b>单选：</b>从 s 中第i到j（不含j）以k为步长的子序列表达是 &rarr; <b class="cg">s[i:j:k]</b>
+  <b>单选：</b>s[1:4:2] &rarr; <b class="cg">['gold','brown']</b>&nbsp;&nbsp;
+  <b>判断：</b>lst[::2]取偶数下标元素 &rarr; <b class="cg">对</b>
 </div>
 </div>
 </section>
@@ -417,56 +392,225 @@ lst[::2]   # [1,3,5]
 <div class="sb">
 <div class="badge">列表 / 推导式</div>
 <h2 class="ul">列表推导式</h2>
-<pre><code class="language-python"># 基础
-squares = [i**2 for i in range(1, 11)]
+<pre><code class="language-python">squares = [i**2 for i in range(1, 11)]
 # [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
 
-# 带条件过滤
 result = [i for i in range(15) if i % 5 == 0]
-# [0, 5, 10]   ← 注意 0 也在里面！
+# [0, 5, 10]  ← 注意 0 也在里面！
 
-# 字符串拆分转整数（大题高频）
-lst = input().split(",")       # 输入: "1,2,3,4"
-lst = [int(i) for i in lst]   # [1, 2, 3, 4]</code></pre>
+# 字符串拆分转整数（大题常用）
+lst = input().split(",")
+lst = [int(i) for i in lst]</code></pre>
 <div class="gap"></div>
 <div class="g2">
   <div class="card fragment">
-    <div class="bold cb sm" style="margin-bottom:10px">语法结构拆解</div>
+    <div class="cb bold sm" style="margin-bottom:8px">语法结构</div>
     <div style="font-size:.82em;line-height:2.2">
-      <code class="il">[</code>
-      <span class="cg bold">表达式</span>
-      &nbsp;
-      <code class="il">for</code>
-      &nbsp;
-      <span class="cb bold">变量</span>
-      &nbsp;
-      <code class="il">in</code>
-      &nbsp;
-      <span class="cp bold">可迭代对象</span>
-      &nbsp;
-      <code class="il">if</code>
-      &nbsp;
-      <span class="cy bold">条件</span>
-      &nbsp;
-      <code class="il">]</code>
+      <code class="il">[</code> <span class="cg bold">表达式</span> <code class="il">for</code>
+      <span class="cb bold">变量</span> <code class="il">in</code>
+      <span class="cp bold">可迭代对象</span> <code class="il">if</code>
+      <span class="cy bold">条件</span> <code class="il">]</code>
     </div>
   </div>
   <div class="tip r fragment">
-    <b>单选：</b>[i for i in range(15) if i%5==0] 的值是？<br>
-    A.[5,10] &nbsp; B.[0,5,10,15] &nbsp; C.[5,10,15] &nbsp; <b class="cg">D.[0,5,10]</b>
+    <b>单选：</b>[i for i in range(15) if i%5==0]<br>
+    A.[5,10] B.[0,5,10,15] C.[5,10,15] <b class="cg">D.[0,5,10]</b>
   </div>
 </div>
 </div>
 </section>
 
+<!-- 嵌套列表 NEW -->
+<section>
+<div class="sb">
+<div class="badge">列表 / 嵌套</div>
+<h2 class="ul">嵌套列表（二维列表）<span class="pill pill-b">新内容</span></h2>
+<div class="g2">
+<div>
+<pre><code class="language-python"># 创建二维列表
+matrix = [[1, 2, 3],
+          [4, 5, 6],
+          [7, 8, 9]]
 
-<!-- ══════════════════ SEC 04 循环 ══════════════════ -->
+# 访问元素：[行][列]
+print(matrix[0])      # [1, 2, 3]
+print(matrix[0][1])   # 2  ← 第0行第1列
+print(matrix[2][2])   # 9  ← 最后一个
+
+# len() 只数外层
+print(len(matrix))    # 3
+
+# 遍历二维列表
+for row in matrix:
+    for x in row:
+        print(x, end=" ")
+    print()</code></pre>
+</div>
+<div class="stg">
+  <div class="card card-y">
+    <div class="cy bold sm" style="margin-bottom:8px">混合嵌套陷阱</div>
+    <pre style="margin:0"><code class="language-python">ls = [[1,2,3], [4,5], 6]
+#       元素0    元素1  元素2
+
+print(len(ls))    # 3 ← 外层3个！
+print(ls[0][1])   # 2
+print(ls[2])      # 6（不是列表）
+# ls[2][0] ← 报错！整数不能索引</code></pre>
+  </div>
+  <div class="card" style="margin-top:9px">
+    <div class="cb bold sm" style="margin-bottom:8px">实际应用</div>
+    <pre style="margin:0"><code class="language-python"># 二维列表常用于表格数据
+students = [
+    ["张三", 90, 85],
+    ["李四", 78, 92],
+    ["王五", 88, 79]
+]
+for s in students:
+    print(s[0], "总分:", s[1]+s[2])</code></pre>
+  </div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ══ SEC 04 字符串方法 NEW ══ -->
 <section>
 <div class="sec">
-  <div class="sec-line sec-line-b"></div>
-  <h1>循环进阶</h1>
-  <h3>while True / 登录验证 / ASCII</h3>
+  <div class="sec-line" style="background:linear-gradient(90deg,var(--purple),transparent)"></div>
+  <h1 style="-webkit-text-fill-color:var(--purple);background:none">字符串高级方法</h1>
+  <h3>split / join / strip / find / replace</h3>
   <div class="sec-num">04</div>
+</div>
+</section>
+
+<section>
+<div class="sb">
+<div class="badge">字符串 / 方法</div>
+<h2 class="ul">字符串高级方法 <span class="pill pill-r">考试出现</span></h2>
+<div class="g2">
+<div>
+<pre><code class="language-python"># split() — 拆分字符串，返回列表
+s = "1,2,3,4"
+print(s.split(","))  # ['1','2','3','4']
+
+s2 = "hello world"
+print(s2.split())    # ['hello','world'] 默认按空格
+
+# join() — 列表合并成字符串
+lst = ['a', 'b', 'c']
+print(",".join(lst))   # a,b,c
+print(" ".join(lst))   # a b c
+print("".join(lst))    # abc
+
+# strip() — 去除首尾空格（或指定字符）
+s = "  hello  "
+print(s.strip())       # "hello"
+
+# find() — 查找子字符串位置
+s = "hello world"
+print(s.find("world")) # 6  ← 起始下标
+print(s.find("xyz"))   # -1 ← 找不到返回-1
+
+# replace() — 替换
+s = "hello"
+print(s.replace("l", "L"))  # heLLo</code></pre>
+</div>
+<div class="stg">
+  <div class="card card-b">
+    <div class="cb bold sm" style="margin-bottom:8px">split 是大题常用</div>
+    <pre style="margin:0"><code class="language-python"># 输入 "1,2,3,4"
+# 转成整数列表
+lst = input().split(",")
+lst = [int(i) for i in lst]
+print(lst)  # [1, 2, 3, 4]</code></pre>
+  </div>
+  <div class="card card-p" style="margin-top:9px">
+    <div class="cp bold sm" style="margin-bottom:8px">split vs split(",") 的区别</div>
+    <pre style="margin:0"><code class="language-python">s = "a  b  c"
+s.split()     # ['a','b','c']  处理多空格
+s.split(" ")  # ['a','','b','','c']  严格按一个空格</code></pre>
+  </div>
+  <div class="tip r" style="margin-top:8px">
+    <b>单选：</b>s="The python language..." print(s.split(' '))<br>
+    &rarr; <b class="cg">['The','python','language','is',...]</b>
+  </div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ══ SEC 05 类型转换 NEW ══ -->
+<section>
+<div class="sec">
+  <div class="sec-line" style="background:linear-gradient(90deg,var(--orange),transparent)"></div>
+  <h1 style="-webkit-text-fill-color:var(--orange);background:none">类型转换</h1>
+  <h3>int / float / str / list — input() 的隐藏陷阱</h3>
+  <div class="sec-num">05</div>
+</div>
+</section>
+
+<section>
+<div class="sb">
+<div class="badge">类型转换</div>
+<h2 class="ul">类型转换 <span class="pill pill-r">最常见 bug</span></h2>
+<div class="g2">
+<div>
+<pre><code class="language-python"># 常见转换
+int("42")           # 42
+float("3.14")       # 3.14
+str(100)            # "100"
+list("abc")         # ['a', 'b', 'c']
+tuple([1, 2, 3])    # (1, 2, 3)
+
+# 陷阱1：int() 不能直接转小数字符串
+int("3.14")         # ValueError!
+int(float("3.14"))  # 3  ← 正确做法
+
+# 陷阱2：input() 永远返回字符串
+n = input()         # 用户输入 42
+print(n + 1)        # TypeError! str + int
+n = int(input())    # ← 正确，先转再用
+print(n + 1)        # 43
+
+# 陷阱3：字符串比较与整数比较
+a = input()         # 输入 "9"
+b = input()         # 输入 "10"
+print(a > b)        # True! 字符串比较：'9' > '1'
+print(int(a) > int(b))  # False ← 正确</code></pre>
+</div>
+<div class="stg">
+  <div class="card card-r">
+    <div class="cr bold sm" style="margin-bottom:8px">input() 的本质</div>
+    <div style="font-size:.78em;color:var(--muted);line-height:1.8">
+      <code class="il">input()</code> 返回的永远是 <span class="cr bold">字符串</span><br>
+      哪怕用户输入的是数字<br>
+      <br>
+      要做计算 &rarr; <code class="il">int(input())</code><br>
+      要做浮点 &rarr; <code class="il">float(input())</code>
+    </div>
+  </div>
+  <div class="card" style="margin-top:9px">
+    <div class="cb bold sm" style="margin-bottom:6px">type() 检查类型</div>
+    <pre style="margin:0"><code class="language-python">x = "42"
+print(type(x))      # <class 'str'>
+x = int(x)
+print(type(x))      # <class 'int'></code></pre>
+  </div>
+  <div class="tip y" style="margin-top:7px">
+    <b>改错题常考：</b>看到 input() 后直接用于计算，大概率缺少 int() 或 float() 转换
+  </div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ══ SEC 06 循环 ══ -->
+<section>
+<div class="sec">
+  <div class="sec-line" style="background:linear-gradient(90deg,var(--blue),transparent)"></div>
+  <h1>循环进阶</h1>
+  <h3>while True / for...else / ASCII</h3>
+  <div class="sec-num">06</div>
 </div>
 </section>
 
@@ -486,10 +630,10 @@ for i in range(3):
     else:
         print("输入有误！")
 else:
-    # for 循环正常结束（没被break）才执行
+    # 循环正常跑完（没被break）才执行
     print("对不起，三次输入错误！")
 
-# 成绩验证（while 版本）
+# 成绩验证
 while True:
     n = int(input())
     if 0 <= n <= 100:
@@ -500,17 +644,17 @@ while True:
 </div>
 <div class="stg">
   <div class="card card-b">
-    <div class="cb bold sm" style="margin-bottom:8px">for...else 关键点</div>
-    <div style="font-size:.78em;line-height:1.8;color:var(--muted)">
+    <div class="cb bold sm" style="margin-bottom:7px">for...else 关键点</div>
+    <div style="font-size:.78em;color:var(--muted);line-height:1.8">
       循环被 <code class="il">break</code> 打断 &rarr; <span class="cr">else 不执行</span><br>
       循环正常跑完 &rarr; <span class="cg">else 执行</span>
     </div>
   </div>
-  <div class="card card-y" style="margin-top:10px">
-    <div class="cy bold sm" style="margin-bottom:8px">while 持续输入模式</div>
+  <div class="card card-y" style="margin-top:9px">
+    <div class="cy bold sm" style="margin-bottom:7px">while 持续输入模式</div>
     <pre style="margin:0"><code class="language-python">lst = []
 while True:
-    x = input()  # 不加提示！
+    x = input()  # 括号内不加提示！
     if x == 'q':
         break
     lst.append(int(x))
@@ -535,7 +679,7 @@ ord('A')   # 65
 chr(97)    # 'a'
 chr(65)    # 'A'
 
-# 大题：循环输出 ASCII 对应字符
+# 大题：循环输出 ASCII 字符
 while True:
     s = input()
     if s in "nN":       # 输入 N 或 n 退出
@@ -547,33 +691,31 @@ while True:
         print("请重新输入")</code></pre>
 </div>
 <div>
-  <div class="card stg" style="margin-bottom:10px">
-    <div class="cb bold sm" style="margin-bottom:10px">常用 ASCII 值</div>
+  <div class="card" style="margin-bottom:9px">
+    <div class="cb bold sm" style="margin-bottom:9px">常用 ASCII 值</div>
     <table class="t">
       <tr><th>字符</th><th>数字</th><th>字符</th><th>数字</th></tr>
       <tr><td>'A'</td><td>65</td><td>'a'</td><td>97</td></tr>
       <tr><td>'Z'</td><td>90</td><td>'z'</td><td>122</td></tr>
       <tr><td>'0'</td><td>48</td><td>'9'</td><td>57</td></tr>
-      <tr><td>' '(空格)</td><td>32</td><td colspan="2">有效范围 0~127</td></tr>
     </table>
   </div>
   <div class="tip r">
-    补充：ord('a') 输出 <b>97</b>，chr(97) 输出 <b>'a'</b><br>
-    单选：chr(97) 和 ord('a') 的对应关系需要掌握
+    <b>记忆：</b>大写A=65，小写a=97，差32<br>
+    ord('a')=97，chr(97)='a'，互为逆运算
   </div>
 </div>
 </div>
 </div>
 </section>
 
-
-<!-- ══════════════════ SEC 05 数学 ══════════════════ -->
+<!-- ══ SEC 07 数学 ══ -->
 <section>
 <div class="sec">
-  <div class="sec-line sec-line-b"></div>
+  <div class="sec-line" style="background:linear-gradient(90deg,var(--blue),transparent)"></div>
   <h1>数学模块与格式化</h1>
   <h3>math / 公式转换 / %.2f</h3>
-  <div class="sec-num">05</div>
+  <div class="sec-num">07</div>
 </div>
 </section>
 
@@ -589,7 +731,7 @@ x = int(input())            # 不加提示！
 y = int(input())
 
 # sin(x) + (cos(y)-5x) / √(x²+1)
-n = sin(x) + (cos(y) - 5*x) / (x**2 + 1)**(1/2)
+n = sin(x) + (cos(y)-5*x) / (x**2+1)**(1/2)
 print("%.2f" % n)
 
 # 元角分
@@ -602,22 +744,21 @@ print("%d元%d角%d分" % (y, j, f))
 </div>
 <div class="stg">
   <div class="card">
-    <div class="cb bold sm" style="margin-bottom:8px">公式转换对照</div>
-    <table class="t" style="font-size:.72em">
+    <div class="cb bold sm" style="margin-bottom:7px">公式转换对照</div>
+    <table class="t" style="font-size:.71em">
       <tr><th>数学</th><th>Python</th></tr>
       <tr><td>x²</td><td><code class="il">x**2</code></td></tr>
-      <tr><td>√x</td><td><code class="il">x**(1/2)</code></td></tr>
+      <tr><td>√x</td><td><code class="il">x**(1/2)</code> 或 <code class="il">x**0.5</code></td></tr>
       <tr><td>∛x</td><td><code class="il">x**(1/3)</code></td></tr>
-      <tr><td>a/b 分数线</td><td><code class="il">(a) / (b)</code></td></tr>
-      <tr><td>sin / cos</td><td>需要 import</td></tr>
+      <tr><td>sin(x)</td><td><code class="il">sin(x)</code>（需import）</td></tr>
     </table>
   </div>
-  <div class="card card-r" style="margin-top:10px">
+  <div class="card card-r" style="margin-top:9px">
     <div class="cr bold sm" style="margin-bottom:6px">三个扣分点</div>
     <ul>
       <li style="font-size:.78em">input() 括号内有提示信息</li>
       <li style="font-size:.78em">忘写 from math import sin,cos</li>
-      <li style="font-size:.78em">没用 %.2f 保留两位小数</li>
+      <li style="font-size:.78em">结果没用 %.2f 保留小数</li>
     </ul>
   </div>
 </div>
@@ -625,67 +766,232 @@ print("%d元%d角%d分" % (y, j, f))
 </div>
 </section>
 
-
-<!-- ══════════════════ SEC 06 AI 工具 ══════════════════ -->
+<!-- ══ SEC 08 报错 NEW ══ -->
 <section>
 <div class="sec">
-  <div class="sec-line sec-line-t"></div>
-  <h1 style="-webkit-text-fill-color:var(--teal);background:none">AI 编程工具</h1>
-  <h3>让 AI 直接在你的终端里帮你写代码</h3>
-  <div class="sec-num">06</div>
+  <div class="sec-line" style="background:linear-gradient(90deg,var(--red),transparent)"></div>
+  <h1 style="-webkit-text-fill-color:var(--red);background:none">常见报错大全</h1>
+  <h3>看懂报错，改错题拿分</h3>
+  <div class="sec-num">08</div>
 </div>
 </section>
 
-<!-- 为什么用 -->
 <section>
 <div class="sb">
-<h2 class="ul">为什么要在终端里用 AI？</h2>
+<div class="badge">报错 / Part 1</div>
+<h2 class="ul">六种常见报错 — 上半部分</h2>
 <div class="g2">
-  <div>
-    <div class="card card-r" style="margin-bottom:12px">
-      <div class="cr bold sm" style="margin-bottom:10px">以前遇到 bug 怎么办</div>
-      <ul>
-        <li>看报错信息，看不懂</li>
-        <li>去 StackOverflow 搜索</li>
-        <li>找半天看不明白</li>
-        <li>复制粘贴代码，还是不对</li>
-        <li>重复好几次，浪费 1 小时</li>
-      </ul>
+<div>
+  <div class="err-box">
+    <div class="err-name">IndexError: list index out of range</div>
+    <div class="err-body">
+      <span class="cause">原因：</span>下标超出列表范围<br>
+      <code style="font-size:.88em">lst=[1,2,3]; print(lst[3])</code> ← lst只有下标0,1,2<br>
+      <span class="fix">修复：用 range(len(lst)) 或检查下标大小</span>
     </div>
   </div>
-  <div>
-    <div class="card card-g">
-      <div class="cg bold sm" style="margin-bottom:10px">现在用 AI 工具怎么做</div>
-      <ul>
-        <li>在项目文件夹打开终端</li>
-        <li>启动 AI 工具</li>
-        <li>"帮我找出这个文件的 bug"</li>
-        <li>AI 直接读你的代码，给出修复</li>
-        <li>确认后自动修改文件</li>
-        <li>2 分钟搞定</li>
-      </ul>
+  <div class="err-box">
+    <div class="err-name">TypeError: 'int' object is not subscriptable</div>
+    <div class="err-body">
+      <span class="cause">原因：</span>对整数用了下标 [] 或调用了不该调用的操作<br>
+      <code style="font-size:.88em">x = 5; print(x[0])</code> ← 整数不能用索引<br>
+      <span class="fix">修复：检查变量类型，是否少了 int() 转换</span>
     </div>
+  </div>
+  <div class="err-box">
+    <div class="err-name">TypeError: can only concatenate str (not "int") to str</div>
+    <div class="err-body">
+      <span class="cause">原因：</span>字符串和整数直接相加<br>
+      <code style="font-size:.88em">n = input(); print(n + 1)</code> ← n是字符串<br>
+      <span class="fix">修复：<code>int(input())</code> 先转换类型</span>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="err-box">
+    <div class="err-name">NameError: name 'x' is not defined</div>
+    <div class="err-body">
+      <span class="cause">原因：</span>使用了未定义的变量名<br>
+      <code style="font-size:.88em">print(Score)</code> ← 大小写写错，或变量未赋值<br>
+      <span class="fix">修复：检查变量名拼写，注意大小写</span>
+    </div>
+  </div>
+  <div class="err-box">
+    <div class="err-name">ValueError: invalid literal for int()</div>
+    <div class="err-body">
+      <span class="cause">原因：</span>把不能转换的字符串传给 int()<br>
+      <code style="font-size:.88em">int("3.14")</code> 或 <code style="font-size:.88em">int("abc")</code><br>
+      <span class="fix">修复：先用 float() 转，再 int()；或用 try/except</span>
+    </div>
+  </div>
+  <div class="err-box">
+    <div class="err-name">KeyError: 'name'</div>
+    <div class="err-body">
+      <span class="cause">原因：</span>访问字典中不存在的 key<br>
+      <code style="font-size:.88em">d={"age":18}; print(d["name"])</code><br>
+      <span class="fix">修复：用 <code>d.get("name")</code>，找不到返回 None</span>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="sb">
+<div class="badge">报错 / Part 2</div>
+<h2 class="ul">快速识别报错 — 看第一行关键词</h2>
+<div class="card" style="margin-bottom:12px">
+  <table class="t">
+    <tr><th>报错关键词</th><th>第一反应</th><th>常见原因</th></tr>
+    <tr><td class="cr bold">IndexError</td><td>下标越界</td><td>range() 范围太大，或列表长度判断错</td></tr>
+    <tr><td class="cr bold">TypeError</td><td>类型不匹配</td><td>input() 忘记 int()；对整数用了 []</td></tr>
+    <tr><td class="cr bold">NameError</td><td>变量名错</td><td>拼写错误、大小写不一致、变量没初始化</td></tr>
+    <tr><td class="cr bold">ValueError</td><td>值不合法</td><td>int("3.14") 或 int("abc")</td></tr>
+    <tr><td class="cr bold">KeyError</td><td>字典 key 不存在</td><td>key 拼写错、用 [] 代替 .get()</td></tr>
+    <tr><td class="cr bold">SyntaxError</td><td>语法写错</td><td>缩进错、括号不配对、= 和 == 混用</td></tr>
+    <tr><td class="cr bold">IndentationError</td><td>缩进错误</td><td>Tab 和空格混用、if/for 后面缩进不一致</td></tr>
+  </table>
+</div>
+<div class="g2 fragment">
+  <div class="card card-y">
+    <div class="cy bold sm" style="margin-bottom:7px">改错题拿分技巧</div>
+    <ul>
+      <li>先看报错类型，锁定问题范围</li>
+      <li>找 input() 有没有 int()/float()</li>
+      <li>找 = 是否写成了 == 或反过来</li>
+      <li>检查列表操作是否用对了方法</li>
+    </ul>
+  </div>
+  <div class="term">
+    <div class="term-bar">
+      <div class="term-dot dr"></div><div class="term-dot dy"></div><div class="term-dot dg"></div>
+      <span class="term-title">读懂报错示范</span>
+    </div>
+    <div class="term-body">
+<span class="tr">Traceback (most recent call last):</span>
+<span class="tr">  File "main.py", line 3, in &lt;module&gt;</span>
+<span class="tr">    print(lst[5])</span>
+<span class="ty">IndexError: list index out of range</span>
+
+<span class="to">→ 看最后一行：IndexError</span>
+<span class="to">→ 看 line 3：lst[5]</span>
+<span class="tg">→ 结论：lst 不够5+1个元素</span>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+
+<!-- ══ SEC 09 改错 NEW ══ -->
+<section>
+<div class="sec">
+  <div class="sec-line" style="background:linear-gradient(90deg,var(--yellow),transparent)"></div>
+  <h1 style="-webkit-text-fill-color:var(--yellow);background:none">改错题专项</h1>
+  <h3>高频错误模式 + 解题框架</h3>
+  <div class="sec-num">09</div>
+</div>
+</section>
+
+<section>
+<div class="sb">
+<div class="badge">改错题</div>
+<h2 class="ul">改错题 — 高频错误模式</h2>
+<div class="g2">
+<div>
+  <div class="card card-r" style="margin-bottom:9px">
+    <div class="cr bold sm" style="margin-bottom:7px">错误模式 1：缺少类型转换</div>
+    <pre style="margin:0"><code class="language-python"># 错误版本
+uname = input()
+pwd = input()
+# 用户输入了整数但没转换
+
+# 正确做法（字符串比较不需要转换）
+# 但如果题目要求数字比较：
+score = int(input())  # 要加 int()</code></pre>
+  </div>
+  <div class="card card-r">
+    <div class="cr bold sm" style="margin-bottom:7px">错误模式 2：= 和 == 混用</div>
+    <pre style="margin:0"><code class="language-python"># 错误：= 是赋值，不是比较
+if uname = "admin":   # SyntaxError!
+
+# 正确：== 才是比较
+if uname == "admin":  # ← 双等号</code></pre>
+  </div>
+</div>
+<div>
+  <div class="card card-r" style="margin-bottom:9px">
+    <div class="cr bold sm" style="margin-bottom:7px">错误模式 3：列表方法用错</div>
+    <pre style="margin:0"><code class="language-python"># 错误：index() 是查找，不是插入
+lst.index(x)   # 返回x的下标
+
+# 如果想插入：
+lst.append(x)   # 追加到末尾
+lst.insert(i,x) # 插到位置i
+
+# 错误：lst(len) 不是访问最后一个
+lst[len(lst)-1]  # ← 才是最后一个
+lst[-1]          # ← 更简单</code></pre>
+  </div>
+  <div class="card card-r">
+    <div class="cr bold sm" style="margin-bottom:7px">错误模式 4：缩进错误</div>
+    <pre style="margin:0"><code class="language-python"># 错误：else 和哪个 if 对应不清
+for i in range(3):
+    if ...:
+        break
+    else:      # ← for 的 else，不是 if 的！
+        print("输入有误！")
+# 要仔细看对齐位置</code></pre>
+  </div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ══ SEC 10 AI 工具 ══ -->
+<section>
+<div class="sec">
+  <div class="sec-line" style="background:linear-gradient(90deg,var(--teal),transparent)"></div>
+  <h1 style="-webkit-text-fill-color:var(--teal);background:none">AI 编程工具</h1>
+  <h3>让 AI 在终端直接帮你写代码 / 找 bug</h3>
+  <div class="sec-num">10</div>
+</div>
+</section>
+
+<section>
+<div class="sb">
+<h2 class="ul">为什么要用终端 AI 工具？</h2>
+<div class="g2">
+  <div class="card card-r">
+    <div class="cr bold sm" style="margin-bottom:9px">以前遇到 bug 怎么办</div>
+    <ul>
+      <li>看报错信息，看不懂</li>
+      <li>复制去 Google / 百度搜索</li>
+      <li>找到一堆不相关的答案</li>
+      <li>复制代码，还是报错</li>
+      <li>重复好几次，浪费 1 小时</li>
+    </ul>
+  </div>
+  <div class="card card-g">
+    <div class="cg bold sm" style="margin-bottom:9px">现在用终端 AI 怎么做</div>
+    <ul>
+      <li>在项目文件夹打开终端</li>
+      <li>启动 DeepSeek-TUI</li>
+      <li>输入："帮我找出这个文件的 bug"</li>
+      <li>AI 直接读你的代码，给出原因和修复方案</li>
+      <li>确认后自动修改文件</li>
+      <li>2 分钟搞定</li>
+    </ul>
   </div>
 </div>
 <div class="gap"></div>
 <div class="card card-t fragment">
-  <div class="ct bold sm" style="margin-bottom:8px">关键区别：上下文感知</div>
+  <div class="ct bold sm" style="margin-bottom:7px">关键区别：上下文感知</div>
   <div style="font-size:.8em;color:var(--muted);line-height:1.7">
-    普通 ChatGPT：你需要把代码<b style="color:var(--text)">手动粘贴进去</b>，AI 不知道你有什么文件<br>
-    终端 AI 工具：<b style="color:var(--teal)">直接读取你的整个项目</b>，知道所有文件内容，上下文完整
+    普通 ChatGPT：需要<b style="color:var(--text)">手动粘贴代码</b>，AI 不知道你有什么文件，不知道报错在哪行<br>
+    终端 AI 工具：<b style="color:var(--teal)">直接读取整个项目</b>，知道所有文件，上下文完整，精准定位问题
   </div>
 </div>
-</div>
-</section>
-
-
-<!-- ══════════════════ DeepSeek-TUI ══════════════════ -->
-<section>
-<div class="sec">
-  <div class="sec-line sec-line-t"></div>
-  <h1 style="-webkit-text-fill-color:var(--teal);background:none">DeepSeek-TUI</h1>
-  <h3>github.com/Hmbown/DeepSeek-TUI</h3>
-  <div class="sec-num">TUI</div>
 </div>
 </section>
 
@@ -695,31 +1001,31 @@ print("%d元%d角%d分" % (y, j, f))
 <h2 class="ul">DeepSeek-TUI — 概览 <span class="star-badge">★ 31,700+ stars</span></h2>
 <div class="g2">
   <div>
-    <div class="card card-t" style="margin-bottom:12px">
-      <div class="ct bold sm" style="margin-bottom:8px">是什么</div>
-      <div style="font-size:.8em;color:var(--muted);line-height:1.7">
+    <div class="card card-t" style="margin-bottom:11px">
+      <div class="ct bold sm" style="margin-bottom:7px">是什么</div>
+      <div style="font-size:.79em;color:var(--muted);line-height:1.7">
         专为 DeepSeek 模型设计的<b style="color:var(--text)">终端编程助手</b>。<br>
-        就像 Claude Code 一样，但用的是 DeepSeek 模型。<br>
-        在你的终端里直接读文件、改代码、跑命令，<br>
-        支持 <b style="color:var(--teal)">1M token 超长上下文</b>。
+        类似 Claude Code，但用 DeepSeek 模型，价格极低。<br>
+        在终端直接读文件、改代码、跑命令。<br>
+        <b style="color:var(--teal)">支持 1M token 超长上下文</b>，整个项目一次全读。
       </div>
     </div>
     <div class="feat stg">
       <div class="feat-item">
-        <div class="feat-icon ct">F</div>
-        <div><div class="feat-label">读写文件</div><div class="feat-desc">直接操作你的 .py 文件</div></div>
+        <div class="feat-label">读写文件</div>
+        <div class="feat-desc">直接操作你的 .py 文件</div>
       </div>
       <div class="feat-item">
-        <div class="feat-icon cy">S</div>
-        <div><div class="feat-label">执行命令</div><div class="feat-desc">运行 shell 命令、脚本</div></div>
+        <div class="feat-label">执行命令</div>
+        <div class="feat-desc">运行 shell 命令、脚本</div>
       </div>
       <div class="feat-item">
-        <div class="feat-icon cp">G</div>
-        <div><div class="feat-label">管理 Git</div><div class="feat-desc">commit、diff、branch</div></div>
+        <div class="feat-label">管理 Git</div>
+        <div class="feat-desc">commit/diff/branch</div>
       </div>
       <div class="feat-item">
-        <div class="feat-icon cb">W</div>
-        <div><div class="feat-label">联网搜索</div><div class="feat-desc">查文档、找解决方案</div></div>
+        <div class="feat-label">联网搜索</div>
+        <div class="feat-desc">查文档、找解决方案</div>
       </div>
     </div>
   </div>
@@ -736,15 +1042,16 @@ print("%d元%d角%d分" % (y, j, f))
 <span class="to">  Model: deepseek-v4-pro</span>
 <span class="to">  Context: 1,000,000 tokens</span>
 <span class="to">  Mode: Agent</span>
+<span class="to">  Files: main.py, test.py, data.csv</span>
 
-<span class="to">─────────────────────────────</span>
+<span class="to">──────────────────────────────</span>
 
 <span class="tp">&gt;</span> <span class="tc">帮我找出 main.py 的 bug</span>
 
-<span class="tai">  正在读取 main.py...</span>
+<span class="tai">  读取 main.py...</span>
 <span class="tai">  发现问题：第 8 行</span>
 <span class="ty">  lst[len(lst)] → IndexError</span>
-<span class="tai">  应改为 lst.append(x)</span>
+<span class="tai">  建议：lst.append(x)</span>
 
 <span class="to">  [A]pply  [S]kip  [Q]uit</span>
 <span class="tp">&gt;</span> <span class="tc">A</span>
@@ -760,24 +1067,25 @@ print("%d元%d角%d分" % (y, j, f))
 <section>
 <div class="sb">
 <div class="badge">DeepSeek-TUI / 安装</div>
-<h2 class="ul">安装 DeepSeek-TUI — 分步骤</h2>
+<h2 class="ul">安装 DeepSeek-TUI — 5 步</h2>
 <div class="g2">
   <div>
     <ol class="steps">
-      <li><div><b>安装 Node.js</b><br><span class="sm">去 nodejs.org 下载安装，用于运行 npm 命令</span></div></li>
+      <li><div><b>安装 Node.js</b><br><span class="sm">去 nodejs.org 下载安装</span></div></li>
       <li><div><b>安装 DeepSeek-TUI</b>
-        <pre style="margin-top:6px"><code class="language-bash">npm install -g deepseek-tui</code></pre>
+        <pre style="margin-top:5px"><code class="language-bash">npm install -g deepseek-tui</code></pre>
       </div></li>
-      <li><div><b>获取 DeepSeek API Key</b><br><span class="sm">访问 platform.deepseek.com → 注册登录 → API Keys → 创建新 Key</span></div></li>
+      <li><div><b>注册获取 DeepSeek API Key</b><br>
+        <span class="sm">platform.deepseek.com → API Keys → Create</span>
+      </div></li>
       <li><div><b>配置 API Key</b>
-        <pre style="margin-top:6px"><code class="language-bash"># Mac/Linux
-export DEEPSEEK_API_KEY=sk-xxxxxxxxxxxxxxxx
-
+        <pre style="margin-top:5px"><code class="language-bash"># Mac / Linux
+export DEEPSEEK_API_KEY=sk-xxxxxxxx
 # Windows PowerShell
-$env:DEEPSEEK_API_KEY="sk-xxxxxxxxxxxxxxxx"</code></pre>
+$env:DEEPSEEK_API_KEY="sk-xxxxxxxx"</code></pre>
       </div></li>
-      <li><div><b>在项目文件夹启动</b>
-        <pre style="margin-top:6px"><code class="language-bash">cd ~/homework
+      <li><div><b>在项目目录启动</b>
+        <pre style="margin-top:5px"><code class="language-bash">cd ~/homework
 deepseek-tui</code></pre>
       </div></li>
     </ol>
@@ -795,287 +1103,297 @@ deepseek-tui</code></pre>
 
 <span class="tp">$</span> <span class="tc">export DEEPSEEK_API_KEY=sk-xxx</span>
 
-<span class="tp">$</span> <span class="tc">cd ~/homework && deepseek-tui</span>
+<span class="tp">$</span> <span class="tc">deepseek-tui</span>
 
-<span class="tt">╔══════════════════════════╗</span>
-<span class="tt">║  DeepSeek-TUI  v1.2.0   ║</span>
-<span class="tt">╚══════════════════════════╝</span>
-<span class="to">  Connected to DeepSeek API</span>
-<span class="to">  Working directory: ~/homework</span>
-<span class="to">  Files detected: main.py, test.py</span>
-
+<span class="tt">╔══════════════════════╗</span>
+<span class="tt">║  DeepSeek-TUI 1.2.0  ║</span>
+<span class="tt">╚══════════════════════╝</span>
+<span class="tg">  Connected: DeepSeek API</span>
+<span class="to">  Directory: ~/homework/</span>
 <span class="to">  Select mode:</span>
-<span class="to">  [1] Plan  [2] Agent  [3] YOLO</span>
+<span class="to">  [1]Plan [2]Agent [3]YOLO</span>
 <span class="tp">&gt;</span> <span class="tcursor"></span>
       </div>
-    </div>
-    <div class="tip g fragment" style="margin-top:10px">
-      <b>DeepSeek API 费用极低</b>，比 OpenAI 便宜约 100 倍，学生完全用得起
     </div>
   </div>
 </div>
 </div>
 </section>
 
-<!-- TUI 三种模式 -->
+<!-- 三种模式 -->
 <section>
 <div class="sb">
 <div class="badge">DeepSeek-TUI / 模式</div>
 <h2 class="ul">三种运行模式</h2>
 <div class="g3 stg">
   <div class="mode-card card-b">
-    <div class="cb bold" style="font-size:1.1em;margin-bottom:6px">Plan 模式</div>
-    <div class="cm sm" style="margin-bottom:10px">只读分析，不修改任何文件</div>
-    <div class="term" style="font-size:.9em">
-      <div class="term-bar" style="padding:6px 10px">
+    <div class="cb bold" style="font-size:1.05em;margin-bottom:5px">Plan 模式</div>
+    <div class="cm sm" style="margin-bottom:9px">只读分析，不修改文件</div>
+    <div class="term" style="font-size:.88em">
+      <div class="term-bar" style="padding:5px 10px">
         <div class="term-dot dr"></div><div class="term-dot dy"></div><div class="term-dot dg"></div>
-        <span class="term-title" style="font-size:.85em">Plan Mode</span>
+        <span class="term-title" style="font-size:.8em">Plan Mode</span>
       </div>
-      <div class="term-body" style="font-size:.82em;padding:10px 14px">
-<span class="to">只分析代码，</span>
-<span class="to">不会修改文件</span>
+      <div class="term-body" style="font-size:.8em;padding:9px 12px">
 <span class="tp">&gt;</span> <span class="tc">分析main.py结构</span>
-<span class="tai">  发现 3 个潜在问题：</span>
+<span class="tai">  发现3个潜在问题：</span>
 <span class="tai">  1. 第5行可能越界</span>
-<span class="tai">  2. 第12行类型不匹配</span>
+<span class="tai">  2. 缺少类型转换</span>
 <span class="tai">  3. 缺少异常处理</span>
 <span class="to">  [仅分析，未修改]</span>
       </div>
     </div>
-    <div class="tip" style="margin-top:8px;font-size:.72em">适合：想先了解问题在哪，不想让AI乱改文件时</div>
+    <div class="tip" style="margin-top:7px;font-size:.7em">想先了解问题在哪，不让AI乱改时用</div>
   </div>
   <div class="mode-card card-g">
-    <div class="cg bold" style="font-size:1.1em;margin-bottom:6px">Agent 模式</div>
-    <div class="cm sm" style="margin-bottom:10px">每步操作都需要你确认</div>
-    <div class="term" style="font-size:.9em">
-      <div class="term-bar" style="padding:6px 10px">
+    <div class="cg bold" style="font-size:1.05em;margin-bottom:5px">Agent 模式</div>
+    <div class="cm sm" style="margin-bottom:9px">每步操作都需要确认</div>
+    <div class="term" style="font-size:.88em">
+      <div class="term-bar" style="padding:5px 10px">
         <div class="term-dot dr"></div><div class="term-dot dy"></div><div class="term-dot dg"></div>
-        <span class="term-title" style="font-size:.85em">Agent Mode</span>
+        <span class="term-title" style="font-size:.8em">Agent Mode</span>
       </div>
-      <div class="term-body" style="font-size:.82em;padding:10px 14px">
+      <div class="term-body" style="font-size:.8em;padding:9px 12px">
 <span class="tai">  准备修改 main.py</span>
-<span class="tai">  第5行：lst[3] → lst[-1]</span>
-<span class="to">  确认此操作？</span>
-<span class="to">  [Y]es [N]o [E]dit</span>
+<span class="tai">  第5行：lst[3]→lst[-1]</span>
+<span class="to">  确认？[Y]es [N]o</span>
 <span class="tp">&gt;</span> <span class="tc">Y</span>
-<span class="tg">  已修改 main.py</span>
-<span class="tai">  继续处理第12行...</span>
-<span class="to">  确认？ [Y/N]</span>
-<span class="tp">&gt;</span> <span class="tcursor"></span>
+<span class="tg">  已修改</span>
+<span class="tai">  继续第12行...</span>
+<span class="to">  确认？[Y/N]</span>
       </div>
     </div>
-    <div class="tip g" style="margin-top:8px;font-size:.72em">适合：初学者，保持对代码修改的完全控制</div>
+    <div class="tip g" style="margin-top:7px;font-size:.7em">初学者推荐：保持对每次改动的控制</div>
   </div>
   <div class="mode-card card-r">
-    <div class="cr bold" style="font-size:1.1em;margin-bottom:6px">YOLO 模式</div>
-    <div class="cm sm" style="margin-bottom:10px">全自动执行，不问你</div>
-    <div class="term" style="font-size:.9em">
-      <div class="term-bar" style="padding:6px 10px">
+    <div class="cr bold" style="font-size:1.05em;margin-bottom:5px">YOLO 模式</div>
+    <div class="cm sm" style="margin-bottom:9px">全自动执行，不问你</div>
+    <div class="term" style="font-size:.88em">
+      <div class="term-bar" style="padding:5px 10px">
         <div class="term-dot dr"></div><div class="term-dot dy"></div><div class="term-dot dg"></div>
-        <span class="term-title" style="font-size:.85em">YOLO Mode</span>
+        <span class="term-title" style="font-size:.8em">YOLO Mode</span>
       </div>
-      <div class="term-body" style="font-size:.82em;padding:10px 14px">
-<span class="tp">&gt;</span> <span class="tc">修复所有bug并优化代码</span>
-<span class="tai">  读取 main.py... 完成</span>
-<span class="tg">  修复第5行... 完成</span>
-<span class="tg">  修复第12行... 完成</span>
-<span class="tg">  添加异常处理... 完成</span>
-<span class="tg">  运行测试... 通过</span>
-<span class="tg">  全部完成！共修改 6 处</span>
+      <div class="term-body" style="font-size:.8em;padding:9px 12px">
+<span class="tp">&gt;</span> <span class="tc">修复所有bug</span>
+<span class="tg">  修复第5行...完成</span>
+<span class="tg">  修复第12行...完成</span>
+<span class="tg">  添加异常处理...完成</span>
+<span class="tg">  运行测试...通过</span>
+<span class="tg">  共修改 6 处</span>
       </div>
     </div>
-    <div class="tip r" style="margin-top:8px;font-size:.72em">适合：熟悉工具后，快速处理任务；新手慎用</div>
+    <div class="tip r" style="margin-top:7px;font-size:.7em">熟悉后使用，新手慎用</div>
   </div>
 </div>
 </div>
 </section>
 
-<!-- TUI 实战 1: 调试 -->
+<!-- TUI 实战 1 -->
 <section>
 <div class="sb">
-<div class="badge">DeepSeek-TUI / 实战</div>
-<h2 class="ul">实战演示 1 — 调试 Python 代码</h2>
+<div class="badge">DeepSeek-TUI / 实战1</div>
+<h2 class="ul">实战演示 — 调试 + 报错解释</h2>
 <div class="g2">
-  <div>
-    <div class="card card-r" style="margin-bottom:10px">
-      <div class="cr bold sm" style="margin-bottom:8px">你的代码（有 bug）</div>
-      <pre style="margin:0"><code class="language-python">lst = [10, 20, 30]
-
-for i in range(4):   # 错误：range(4)超出范围
+<div>
+  <div class="card card-r" style="margin-bottom:9px">
+    <div class="cr bold sm" style="margin-bottom:7px">你的代码（有 bug）</div>
+    <pre style="margin:0"><code class="language-python">lst = [10, 20, 30]
+for i in range(4):     # 错误：超出范围
     print(lst[i])
-
-# 运行后报错：
 # IndexError: list index out of range</code></pre>
-    </div>
   </div>
-  <div>
-    <div class="term">
-      <div class="term-bar">
-        <div class="term-dot dr"></div><div class="term-dot dy"></div><div class="term-dot dg"></div>
-        <span class="term-title">DeepSeek-TUI — Agent Mode</span>
-      </div>
-      <div class="term-body">
-<span class="tp">&gt;</span> <span class="tc">我的代码报 IndexError，帮我修复</span>
+  <div class="card card-r">
+    <div class="cr bold sm" style="margin-bottom:7px">另一个场景</div>
+    <pre style="margin:0"><code class="language-python">n = input()
+print(n + 1)
+# TypeError: can only concatenate
+# str (not "int") to str</code></pre>
+  </div>
+</div>
+<div>
+  <div class="term">
+    <div class="term-bar">
+      <div class="term-dot dr"></div><div class="term-dot dy"></div><div class="term-dot dg"></div>
+      <span class="term-title">DeepSeek-TUI — Agent Mode</span>
+    </div>
+    <div class="term-body">
+<span class="tp">&gt;</span> <span class="tc">帮我解释并修复这两个报错</span>
 
-<span class="tai">  正在读取 main.py...</span>
-<span class="tai">  分析错误原因...</span>
-
-<span class="ty">  问题：第3行 range(4)</span>
-<span class="tai">  lst 只有 3 个元素（下标0,1,2）</span>
-<span class="tai">  range(4) 会生成 0,1,2,3</span>
-<span class="tai">  当 i=3 时，lst[3] 不存在</span>
-
-<span class="tai">  修复方案：</span>
-<span class="tg">  range(4) → range(len(lst))</span>
-<span class="tg">  或 range(3)</span>
-
-<span class="to">  应用修复？[Y]es [N]o</span>
+<span class="tai">  错误1：IndexError</span>
+<span class="ty">  lst 有3个元素（下标0,1,2）</span>
+<span class="tai">  range(4) 会尝试访问下标3</span>
+<span class="tg">  修复：range(4) → range(len(lst))</span>
+<span class="to">  [A]pply?</span>
 <span class="tp">&gt;</span> <span class="tc">Y</span>
-<span class="tg">  已修复！main.py 第3行更新</span>
-      </div>
+<span class="tg">  已修复第1个错误</span>
+
+<span class="tai">  错误2：TypeError</span>
+<span class="ty">  input() 返回字符串，不能 + 整数</span>
+<span class="tg">  修复：n = input() → n = int(input())</span>
+<span class="to">  [A]pply?</span>
+<span class="tp">&gt;</span> <span class="tc">Y</span>
+<span class="tg">  全部修复完成！</span><span class="tcursor"></span>
     </div>
   </div>
+</div>
 </div>
 </div>
 </section>
 
-<!-- TUI 实战 2: 理解报错 -->
+<!-- TUI 实战 2 -->
 <section>
 <div class="sb">
-<div class="badge">DeepSeek-TUI / 实战</div>
-<h2 class="ul">实战演示 2 — 理解报错 + 生成代码</h2>
+<div class="badge">DeepSeek-TUI / 实战2</div>
+<h2 class="ul">实战演示 — 期末大题代码生成</h2>
 <div class="g2">
-  <div>
-    <div class="term">
-      <div class="term-bar">
-        <div class="term-dot dr"></div><div class="term-dot dy"></div><div class="term-dot dg"></div>
-        <span class="term-title">DeepSeek-TUI</span>
-      </div>
-      <div class="term-body">
-<span class="tp">&gt;</span> <span class="tc">这个报错什么意思：</span>
-<span class="tc">  TypeError: 'int' object is</span>
-<span class="tc">  not subscriptable</span>
+<div>
+  <div class="term">
+    <div class="term-bar">
+      <div class="term-dot dr"></div><div class="term-dot dy"></div><div class="term-dot dg"></div>
+      <span class="term-title">DeepSeek-TUI</span>
+    </div>
+    <div class="term-body">
+<span class="tp">&gt;</span> <span class="tc">帮我写一个程序：</span>
+<span class="tc">  用for循环找出1-100中</span>
+<span class="tc">  所有能被5整除的两位数</span>
 
-<span class="tai">  这个错误的意思是：</span>
-<span class="tai">  你对一个整数用了下标 []</span>
-<span class="ty">  比如：x = 5; print(x[0]) ← 错误</span>
-<span class="tai">  整数不能用 [] 访问元素</span>
+<span class="tai">  生成代码：</span>
+<span class="tg">  for i in range(10, 100):</span>
+<span class="tg">      if i % 5 == 0:</span>
+<span class="tg">          print(i)</span>
 
-<span class="tai">  常见原因：</span>
-<span class="tai">  · input() 返回字符串，没有转int</span>
-<span class="tai">    后来又当列表/字符串用了</span>
-<span class="tai">  · 变量名冲突，int覆盖了列表</span>
+<span class="tp">&gt;</span> <span class="tc">帮我把这个公式转成Python：</span>
+<span class="tc">  sin(x) + (cos(y)-5x)/√(x²+1)</span>
+<span class="tc">  保留2位小数</span>
 
-<span class="tp">&gt;</span> <span class="tc">帮我写一个登录验证程序，</span>
-<span class="tc">  最多3次机会</span>
-<span class="tai">  正在生成代码...</span><span class="tcursor"></span>
-      </div>
+<span class="tai">  生成代码：</span>
+<span class="tg">  from math import sin, cos</span>
+<span class="tg">  x = int(input())</span>
+<span class="tg">  y = int(input())</span>
+<span class="tg">  n = sin(x)+(cos(y)-5*x)/(x**2+1)**0.5</span>
+<span class="tg">  print("%.2f" % n)</span>
+<span class="tcursor"></span>
     </div>
   </div>
+</div>
+<div class="stg">
+  <div class="scenario">
+    <div class="scenario-q">场景：看不懂某段代码</div>
+    <div class="scenario-a">
+      <span class="cm">你：</span>"解释 main.py 第15行到25行在做什么"<br>
+      <span class="ct">AI：</span>逐行说明逻辑，帮你理解
+    </div>
+  </div>
+  <div class="scenario" style="margin-top:8px">
+    <div class="scenario-q">场景：不知道用哪个方法</div>
+    <div class="scenario-a">
+      <span class="cm">你：</span>"我想把列表降序排列，用哪个方法？"<br>
+      <span class="ct">AI：</span>告诉你 sort(reverse=True) 和 sorted() 的区别
+    </div>
+  </div>
+  <div class="scenario" style="margin-top:8px">
+    <div class="scenario-q">场景：改错题不知道错在哪</div>
+    <div class="scenario-a">
+      <span class="cm">你：</span>把改错题的代码粘贴进去，说"找出所有错误"<br>
+      <span class="ct">AI：</span>逐一列出错误，解释原因，给出修复
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- DeepSeek 价格 NEW -->
+<section>
+<div class="sb">
+<div class="badge">DeepSeek / 价格</div>
+<h2 class="ul">DeepSeek API 价格对比 <span class="pill pill-b">新内容</span></h2>
+<div class="g2">
   <div>
-    <div class="card card-g" style="margin-bottom:10px">
-      <div class="cg bold sm" style="margin-bottom:8px">AI 生成的代码</div>
-      <pre style="margin:0"><code class="language-python">for i in range(3):
-    uname = input()
-    pwd = input()
-    if uname == "admin" and pwd == "admin":
-        print("登录成功！")
-        break
-    else:
-        print("输入有误！")
-else:
-    print("对不起，三次输入错误！")</code></pre>
+    <div class="card" style="margin-bottom:11px">
+      <div class="cb bold sm" style="margin-bottom:10px">每百万 token 的费用（输入 + 输出）</div>
+      <div class="price-row">
+        <span style="width:120px;font-size:.76em">DeepSeek V4</span>
+        <div class="price-bar" style="width:18px;background:var(--green)"></div>
+        <span class="cg bold" style="font-size:.82em">约 ¥2 / 百万 token</span>
+      </div>
+      <div class="price-row">
+        <span style="width:120px;font-size:.76em">Claude Sonnet</span>
+        <div class="price-bar" style="width:140px;background:var(--purple)"></div>
+        <span class="cp bold" style="font-size:.82em">约 ¥100 / 百万 token</span>
+      </div>
+      <div class="price-row">
+        <span style="width:120px;font-size:.76em">GPT-4o</span>
+        <div class="price-bar" style="width:110px;background:var(--blue)"></div>
+        <span class="cb bold" style="font-size:.82em">约 ¥80 / 百万 token</span>
+      </div>
+      <div class="price-row">
+        <span style="width:120px;font-size:.76em">Gemini 1.5</span>
+        <div class="price-bar" style="width:60px;background:var(--yellow)"></div>
+        <span class="cy bold" style="font-size:.82em">约 ¥25 / 百万 token</span>
+      </div>
     </div>
     <div class="tip g">
-      <b>关键点：</b>把你想要的功能用自然语言说出来，AI 直接帮你写代码，再由你理解和学习
+      <b>结论：</b>DeepSeek 比 Claude 便宜约 50 倍，比 GPT-4o 便宜约 40 倍
+    </div>
+  </div>
+  <div class="stg">
+    <div class="card card-g">
+      <div class="cg bold sm" style="margin-bottom:8px">实际花多少钱？</div>
+      <div style="font-size:.78em;color:var(--muted);line-height:1.8">
+        1 百万 token ≈ 约 75 万个汉字<br>
+        一次对话大约消耗 1000~5000 token<br>
+        <br>
+        用 DeepSeek：1 元钱可以对话 <span class="cg bold">几百次</span><br>
+        用 Claude：1 元钱只能对话 <span class="cr bold">几次</span>
+      </div>
+    </div>
+    <div class="card" style="margin-top:9px">
+      <div class="cb bold sm" style="margin-bottom:8px">注册方式</div>
+      <ol class="steps">
+        <li><div>访问 platform.deepseek.com</div></li>
+        <li><div>用手机号或邮箱注册</div></li>
+        <li><div>充值（最低 10 元起）</div></li>
+        <li><div>创建 API Key，复制保存</div></li>
+      </ol>
     </div>
   </div>
 </div>
 </div>
 </section>
 
-<!-- TUI 使用场景 -->
+<!-- opencode -->
 <section>
 <div class="sb">
-<div class="badge">DeepSeek-TUI / 场景</div>
-<h2 class="ul">学生使用场景</h2>
-<div class="g2 stg">
-  <div class="scenario">
-    <div class="scenario-q">场景 1：作业报错看不懂</div>
-    <div class="scenario-a">
-      <span class="cm">你说：</span>"帮我解释这个报错，并修复它"<br>
-      <span class="ct">AI：</span>读取你的文件，找到错误行，解释原因，建议修复，你确认后自动改
-    </div>
-  </div>
-  <div class="scenario">
-    <div class="scenario-q">场景 2：不知道怎么写某个功能</div>
-    <div class="scenario-a">
-      <span class="cm">你说：</span>"帮我写一个函数，输入一个列表，返回所有偶数"<br>
-      <span class="ct">AI：</span>直接在你的文件里写好函数，你可以直接用
-    </div>
-  </div>
-  <div class="scenario">
-    <div class="scenario-q">场景 3：不理解某段代码</div>
-    <div class="scenario-a">
-      <span class="cm">你说：</span>"解释一下 main.py 的第 15 到 25 行在做什么"<br>
-      <span class="ct">AI：</span>逐行解释代码逻辑，帮助你理解
-    </div>
-  </div>
-  <div class="scenario">
-    <div class="scenario-q">场景 4：把数学公式转成 Python</div>
-    <div class="scenario-a">
-      <span class="cm">你说：</span>"把这个数学公式转成 Python 代码：sin(x) + √(x²+1)"<br>
-      <span class="ct">AI：</span><code style="font-size:.85em;color:var(--blue)">sin(x) + (x**2 + 1)**(1/2)</code>，并提醒你 import math
-    </div>
-  </div>
-</div>
-</div>
-</section>
-
-
-<!-- ══════════════════ opencode ══════════════════ -->
-<section>
-<div class="sec">
-  <div class="sec-line sec-line-b"></div>
-  <h1 style="-webkit-text-fill-color:var(--blue);background:none">opencode</h1>
-  <h3>github.com/opencode-ai/opencode</h3>
-  <div class="sec-num">OC</div>
-</div>
-</section>
-
-<!-- opencode 概览 -->
-<section>
-<div class="sb">
-<h2 class="ul">opencode — 概览 <span class="star-badge">★ 12,600+ stars</span> <span class="pill pill-p">Go 语言</span></h2>
+<h2 class="ul">opencode — 多模型终端助手 <span class="star-badge">★ 12,600+ stars</span></h2>
 <div class="g2">
   <div>
-    <div class="card card-b" style="margin-bottom:12px">
-      <div class="cb bold sm" style="margin-bottom:8px">是什么</div>
-      <div style="font-size:.8em;color:var(--muted);line-height:1.7">
-        同样是终端 AI 编程助手，但支持<b style="color:var(--text)">多个 AI 模型</b>。<br>
-        可以配合 DeepSeek、Claude、GPT、Gemini 等使用。<br>
-        用 Go 语言编写，启动快、占用资源少。<br>
+    <div class="card card-b" style="margin-bottom:11px">
+      <div class="cb bold sm" style="margin-bottom:7px">是什么</div>
+      <div style="font-size:.79em;color:var(--muted);line-height:1.7">
+        同样是终端 AI 编程助手，支持<b style="color:var(--text)">多个 AI 模型</b>切换。<br>
+        可以配合 DeepSeek、Claude、GPT 等任意模型使用。<br>
         <b style="color:var(--yellow)">注：原项目已归档，后续版本改名为 Crush</b>
       </div>
     </div>
-    <div class="card stg">
-      <div class="cb bold sm" style="margin-bottom:10px">支持的 AI 模型</div>
-      <div class="g2" style="gap:8px">
-        <div style="background:#18181b;border:1px solid var(--border);border-radius:8px;padding:9px 12px;font-size:.75em">
-          <span class="ct bold">DeepSeek</span><br>
-          <span class="cm">价格极低，推荐</span>
+    <div class="card">
+      <div class="cb bold sm" style="margin-bottom:8px">安装</div>
+      <pre style="margin:0"><code class="language-bash">curl -fsSL https://raw.githubusercontent.com/opencode-ai/opencode/refs/heads/main/install | bash</code></pre>
+    </div>
+    <div class="card" style="margin-top:9px">
+      <div class="cb bold sm" style="margin-bottom:8px">支持的模型</div>
+      <div class="g2" style="gap:7px">
+        <div style="background:#18181b;border:1px solid var(--border);border-radius:7px;padding:8px 11px;font-size:.73em">
+          <span class="ct bold">DeepSeek</span><br><span class="cm">价格极低，推荐</span>
         </div>
-        <div style="background:#18181b;border:1px solid var(--border);border-radius:8px;padding:9px 12px;font-size:.75em">
-          <span class="cp bold">Claude</span><br>
-          <span class="cm">能力强，较贵</span>
+        <div style="background:#18181b;border:1px solid var(--border);border-radius:7px;padding:8px 11px;font-size:.73em">
+          <span class="cp bold">Claude</span><br><span class="cm">能力强，较贵</span>
         </div>
-        <div style="background:#18181b;border:1px solid var(--border);border-radius:8px;padding:9px 12px;font-size:.75em">
-          <span class="cg bold">GPT-4</span><br>
-          <span class="cm">通用，中等价格</span>
+        <div style="background:#18181b;border:1px solid var(--border);border-radius:7px;padding:8px 11px;font-size:.73em">
+          <span class="cg bold">GPT-4</span><br><span class="cm">通用，中等</span>
         </div>
-        <div style="background:#18181b;border:1px solid var(--border);border-radius:8px;padding:9px 12px;font-size:.75em">
-          <span class="cy bold">Ollama</span><br>
-          <span class="cm">本地运行，免费</span>
+        <div style="background:#18181b;border:1px solid var(--border);border-radius:7px;padding:8px 11px;font-size:.73em">
+          <span class="cy bold">Ollama</span><br><span class="cm">本地，免费</span>
         </div>
       </div>
     </div>
@@ -1084,71 +1402,12 @@ else:
     <div class="term">
       <div class="term-bar">
         <div class="term-dot dr"></div><div class="term-dot dy"></div><div class="term-dot dg"></div>
-        <span class="term-title">Terminal — ~/homework/</span>
+        <span class="term-title">opencode 实战 — 公式转换</span>
       </div>
       <div class="term-body">
-<span class="tp">$</span> <span class="tc">opencode</span>
-
-<span class="cb">  ┌─────────────────────────┐</span>
-<span class="cb">  │   opencode  v0.1.x      │</span>
-<span class="cb">  └─────────────────────────┘</span>
-
-<span class="to">  Select AI provider:</span>
-<span class="to">  [1] DeepSeek  ← 推荐（便宜）</span>
-<span class="to">  [2] Claude</span>
-<span class="to">  [3] GPT-4</span>
-<span class="to">  [4] Ollama (local)</span>
-
-<span class="tp">&gt;</span> <span class="tc">1</span>
-
-<span class="tg">  Connected: DeepSeek-V4</span>
-<span class="to">  Working in: ~/homework/</span>
-<span class="tp">&gt;</span> <span class="tcursor"></span>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-
-<!-- opencode 安装 -->
-<section>
-<div class="sb">
-<div class="badge">opencode / 安装</div>
-<h2 class="ul">安装 opencode + 配置 DeepSeek</h2>
-<div class="g2">
-  <div>
-    <ol class="steps">
-      <li><div><b>安装 opencode</b>
-        <pre style="margin-top:6px"><code class="language-bash"># Mac / Linux
-curl -fsSL https://raw.githubusercontent.com/opencode-ai/opencode/refs/heads/main/install | bash
-
-# 安装完成后验证
-opencode --version</code></pre>
-      </div></li>
-      <li><div><b>获取 DeepSeek API Key</b><br>
-        <span class="sm">platform.deepseek.com → API Keys → Create new key</span>
-      </div></li>
-      <li><div><b>设置 API Key</b>
-        <pre style="margin-top:6px"><code class="language-bash">export DEEPSEEK_API_KEY=sk-xxxxxxxx</code></pre>
-      </div></li>
-      <li><div><b>在项目目录启动</b>
-        <pre style="margin-top:6px"><code class="language-bash">cd ~/homework
-opencode</code></pre>
-      </div></li>
-      <li><div><b>选择 DeepSeek 模型，开始使用</b></div></li>
-    </ol>
-  </div>
-  <div class="stg">
-    <div class="term">
-      <div class="term-bar">
-        <div class="term-dot dr"></div><div class="term-dot dy"></div><div class="term-dot dg"></div>
-        <span class="term-title">opencode — 实际对话</span>
-      </div>
-      <div class="term-body">
-<span class="tp">&gt;</span> <span class="tc">帮我把这个数学公式转成Python:</span>
-<span class="tc">  (a+b+c)/sin(a)*sqrt(a²+b²)</span>
-<span class="tc">  + (a³+b³+c³)^(1/3)</span>
+<span class="tp">&gt;</span> <span class="tc">帮我把这个公式转成Python代码：</span>
+<span class="tc">  (a+b+c)/sin(a)*√(a²+b²)</span>
+<span class="tc">  + ∛(a³+b³+c³)，保留2位小数</span>
 
 <span class="tai">  对应的Python代码：</span>
 <span class="tg">  from math import sin</span>
@@ -1161,135 +1420,286 @@ opencode</code></pre>
 
 <span class="to">  要写入文件吗？[Y/N]</span>
 <span class="tp">&gt;</span> <span class="tc">Y</span>
-<span class="tg">  已写入 solution.py</span>
+<span class="tg">  已写入 solution.py</span><span class="tcursor"></span>
       </div>
-    </div>
-    <div class="tip g" style="margin-top:10px">
-      <b>对比 DeepSeek-TUI：</b>opencode 更适合需要切换不同 AI 模型的场景
     </div>
   </div>
 </div>
 </div>
 </section>
 
-
-<!-- ══════════════════ 对比 ══════════════════ -->
+<!-- 两工具对比 -->
 <section>
 <div class="sb">
-<h2 class="ul">两个工具对比 — 怎么选？</h2>
-<div class="card" style="margin-bottom:14px">
+<h2 class="ul">两个工具对比</h2>
+<div class="card" style="margin-bottom:12px">
   <table class="cmp">
     <tr>
       <th>对比项</th>
       <th class="tui">DeepSeek-TUI</th>
       <th class="oc">opencode</th>
     </tr>
-    <tr>
-      <td>GitHub Stars</td>
-      <td><span class="cy">31,700+</span></td>
-      <td><span class="cb">12,600+</span></td>
-    </tr>
-    <tr>
-      <td>专注模型</td>
-      <td><span class="ct">DeepSeek 专属优化</span></td>
-      <td>多模型通用</td>
-    </tr>
-    <tr>
-      <td>开发语言</td>
-      <td>Rust（速度极快）</td>
-      <td>Go（启动快）</td>
-    </tr>
-    <tr>
-      <td>运行模式</td>
-      <td><span class="ct">Plan / Agent / YOLO</span></td>
-      <td>Agent 模式</td>
-    </tr>
-    <tr>
-      <td>上下文长度</td>
-      <td><span class="ct">1M tokens</span></td>
-      <td>取决于所选模型</td>
-    </tr>
-    <tr>
-      <td>项目状态</td>
-      <td class="cg">活跃维护</td>
-      <td><span class="cy">已归档 → Crush</span></td>
-    </tr>
-    <tr>
-      <td>安装方式</td>
-      <td>npm install</td>
-      <td>curl 一键安装</td>
-    </tr>
-    <tr>
-      <td>适合场景</td>
-      <td>只用 DeepSeek，功能全</td>
-      <td>想灵活切换模型</td>
-    </tr>
+    <tr><td>GitHub Stars</td><td class="cy bold">31,700+</td><td class="cb">12,600+</td></tr>
+    <tr><td>专注模型</td><td class="ct">DeepSeek 专属优化</td><td>多模型通用</td></tr>
+    <tr><td>运行模式</td><td class="ct">Plan / Agent / YOLO</td><td>Agent 模式</td></tr>
+    <tr><td>上下文长度</td><td class="ct">1M tokens</td><td>取决于所选模型</td></tr>
+    <tr><td>项目状态</td><td class="cg">活跃维护</td><td class="cy">已归档 → Crush</td></tr>
+    <tr><td>安装方式</td><td>npm install</td><td>curl 一键安装</td></tr>
   </table>
 </div>
 <div class="g2 fragment">
   <div class="card card-t">
-    <div class="ct bold sm" style="margin-bottom:6px">推荐：DeepSeek-TUI</div>
-    <div style="font-size:.78em;color:var(--muted);line-height:1.7">
-      Stars 更多，活跃维护，专为 DeepSeek 优化，YOLO 模式非常方便，适合日常使用
-    </div>
+    <div class="ct bold sm" style="margin-bottom:5px">推荐用 DeepSeek-TUI</div>
+    <div style="font-size:.78em;color:var(--muted)">Stars 最多，活跃维护，YOLO 模式方便，专为 DeepSeek 优化</div>
   </div>
   <div class="card card-b">
-    <div class="cb bold sm" style="margin-bottom:6px">如果想尝试不同模型 → opencode</div>
-    <div style="font-size:.78em;color:var(--muted);line-height:1.7">
-      支持 DeepSeek / Claude / GPT，可以对比不同模型效果，更灵活
+    <div class="cb bold sm" style="margin-bottom:5px">想切换模型用 opencode</div>
+    <div style="font-size:.78em;color:var(--muted)">可以对比 DeepSeek / Claude / GPT 的效果，更灵活</div>
+  </div>
+</div>
+</div>
+</section>
+
+<!-- ══ SEC 11 GitHub NEW ══ -->
+<section>
+<div class="sec">
+  <div class="sec-line" style="background:linear-gradient(90deg,var(--purple),transparent)"></div>
+  <h1 style="-webkit-text-fill-color:var(--purple);background:none">GitHub 探索</h1>
+  <h3>如何找到好项目 / Trending / 推荐</h3>
+  <div class="sec-num">11</div>
+</div>
+</section>
+
+<section>
+<div class="sb">
+<div class="badge">GitHub / 找项目</div>
+<h2 class="ul">GitHub — 如何找到好的 Python 项目</h2>
+<div class="g2">
+  <div class="stg">
+    <div class="card card-p">
+      <div class="cp bold sm" style="margin-bottom:8px">方法 1：Trending 榜单</div>
+      <div style="font-size:.78em;color:var(--muted);line-height:1.7">
+        访问 <b style="color:var(--text)">github.com/trending/python</b><br>
+        每天/每周/每月最热门的 Python 项目<br>
+        Stars 增长最快的就在这里
+      </div>
+    </div>
+    <div class="card card-p" style="margin-top:9px">
+      <div class="cp bold sm" style="margin-bottom:8px">方法 2：按语言搜索</div>
+      <div style="font-size:.78em;color:var(--muted);line-height:1.7">
+        GitHub 搜索框输入关键词<br>
+        筛选 Language: Python<br>
+        按 Stars 排序，找最受欢迎的
+      </div>
+    </div>
+    <div class="card" style="margin-top:9px">
+      <div class="cb bold sm" style="margin-bottom:8px">看 README 的技巧</div>
+      <ul>
+        <li>Star 数量代表受欢迎程度</li>
+        <li>看 README 前几行了解功能</li>
+        <li>看 "Installation" 部分安装难度</li>
+        <li>看最近 commit 日期，判断是否活跃</li>
+      </ul>
+    </div>
+  </div>
+  <div>
+    <div class="term" style="margin-bottom:10px">
+      <div class="term-bar">
+        <div class="term-dot dr"></div><div class="term-dot dy"></div><div class="term-dot dg"></div>
+        <span class="term-title">github.com/trending/python</span>
+      </div>
+      <div class="term-body">
+<span class="tt">  Trending Python repositories</span>
+<span class="to">  Today / This week / This month</span>
+<span class="to">─────────────────────────────</span>
+
+<span class="ty">  1. Hmbown/DeepSeek-TUI</span>
+<span class="to">     ★ 31.7k  Coding agent in terminal</span>
+
+<span class="ty">  2. opencode-ai/opencode</span>
+<span class="to">     ★ 12.6k  AI coding assistant</span>
+
+<span class="ty">  3. textualize/rich</span>
+<span class="to">     ★ 50k+   Beautiful terminal output</span>
+
+<span class="ty">  4. jackfrued/Python-100-Days</span>
+<span class="to">     ★ 160k+  Python学习100天</span>
+
+<span class="to">─────────────────────────────</span>
+<span class="to">  [Clone] [Star] [Fork]</span>
+      </div>
     </div>
   </div>
 </div>
 </div>
 </section>
 
+<!-- 推荐项目 NEW -->
+<section>
+<div class="sb">
+<div class="badge">GitHub / 推荐项目</div>
+<h2 class="ul">推荐：好玩又能学到东西的 Python 项目</h2>
+<div class="g2">
+<div class="stg">
+  <div class="proj">
+    <div class="proj-name cb">Python-100-Days</div>
+    <div class="proj-stars">★ 160,000+ &nbsp; jackfrued/Python-100-Days</div>
+    <div class="proj-desc">从零学Python到项目实战，100天完整学习计划，中文教程，国内最受欢迎的Python学习仓库</div>
+  </div>
+  <div class="proj" style="margin-top:9px">
+    <div class="proj-name cb">rich</div>
+    <div class="proj-stars">★ 50,000+ &nbsp; textualize/rich</div>
+    <div class="proj-desc">让你的 print() 输出变得超级好看，带颜色、进度条、表格，3行代码就能用上</div>
+  </div>
+  <div class="proj" style="margin-top:9px">
+    <div class="proj-name cb">you-get</div>
+    <div class="proj-stars">★ 50,000+ &nbsp; soimort/you-get</div>
+    <div class="proj-desc">Python写的视频下载工具，支持B站、YouTube等，一行命令下载视频，可以看源码学爬虫思路</div>
+  </div>
+</div>
+<div class="stg">
+  <div class="proj">
+    <div class="proj-name cb">thefuck</div>
+    <div class="proj-stars">★ 88,000+ &nbsp; nvbn/thefuck</div>
+    <div class="proj-desc">输错命令后按一下就自动纠正！用Python实现的命令行纠错工具，代码有趣易读</div>
+  </div>
+  <div class="proj" style="margin-top:9px">
+    <div class="proj-name cb">30-seconds-of-python</div>
+    <div class="proj-stars">★ 8,000+ &nbsp; 30-seconds/30-seconds-of-python</div>
+    <div class="proj-desc">Python常用代码片段集合，每个功能只用30秒理解，是速查手册也是学习资源</div>
+  </div>
+  <div class="proj" style="margin-top:9px">
+    <div class="proj-name cb">textual</div>
+    <div class="proj-stars">★ 27,000+ &nbsp; textualize/textual</div>
+    <div class="proj-desc">用Python在终端做像网页一样的界面，超酷！DeepSeek-TUI就是用类似思路做的</div>
+  </div>
+</div>
+</div>
+</div>
+</section>
 
-<!-- ══════════════════ FINAL ══════════════════ -->
+<!-- NotebookLM NEW -->
+<section>
+<div class="sb">
+<div class="badge">工具 / 复习</div>
+<h2 class="ul">NotebookLM — 用 AI 复习期末</h2>
+<div class="g2">
+  <div class="stg">
+    <div class="card card-b">
+      <div class="cb bold sm" style="margin-bottom:8px">是什么</div>
+      <div style="font-size:.79em;color:var(--muted);line-height:1.7">
+        Google 出品的 AI 笔记工具，<b style="color:var(--text)">免费</b>。<br>
+        把你的 PDF/文档上传进去，<br>
+        就能对着这些材料问任何问题。
+      </div>
+    </div>
+    <div class="card" style="margin-top:9px">
+      <div class="cb bold sm" style="margin-bottom:8px">复习期末的做法</div>
+      <ol class="steps">
+        <li><div>访问 notebooklm.google.com</div></li>
+        <li><div>上传期末题目PDF（判断/单选/大题）</div></li>
+        <li><div>问："哪些知识点考得最多？"</div></li>
+        <li><div>问："帮我总结 sort 和 sorted 的区别"</div></li>
+        <li><div>生成播客：让AI用对话形式讲给你听</div></li>
+      </ol>
+    </div>
+  </div>
+  <div>
+    <div class="term">
+      <div class="term-bar">
+        <div class="term-dot dr"></div><div class="term-dot dy"></div><div class="term-dot dg"></div>
+        <span class="term-title">NotebookLM — 对话示例</span>
+      </div>
+      <div class="term-body">
+<span class="to">  [已上传：期末单选46.pdf]</span>
+<span class="to">  [已上传：期末大题20.pdf]</span>
+<span class="to">  [已上传：期末判断27.pdf]</span>
+<span class="to">─────────────────────────</span>
+
+<span class="tp">你：</span><span class="tc">哪个知识点考得最多？</span>
+
+<span class="tai">NotebookLM：</span>
+<span class="tai">根据你的材料，考得最多的是：</span>
+<span class="tai">1. 列表操作（约35%）：append/</span>
+<span class="tai">   extend/sort/切片</span>
+<span class="tai">2. 数据类型辨析（约20%）</span>
+<span class="tai">3. 程序设计（约25%）：数学公式</span>
+<span class="tai">   格式化输出</span>
+
+<span class="tp">你：</span><span class="tc">帮我出5道判断题测测我</span>
+<span class="tai">NotebookLM：好的，开始测试...</span><span class="tcursor"></span>
+      </div>
+    </div>
+    <div class="tip g" style="margin-top:9px">
+      <b>最强功能：</b>生成"播客"，让AI用两个人对话的方式讲解你的材料，适合不想看文字时用
+    </div>
+  </div>
+</div>
+</div>
+</section>
+
+<!-- ══ FINAL ══ -->
 <section>
 <div class="title">
-  <div class="sec-num" style="font-size:12em;color:#141418">END</div>
-  <h1 style="font-size:2.2em">考试重点 + 工具速查</h1>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;width:88%;margin-top:24px;text-align:left;opacity:0;animation:fadeUp .6s .15s ease forwards">
+  <div style="font-size:12em;font-weight:900;color:#141418;position:absolute;right:-20px;top:50%;transform:translateY(-50%)">END</div>
+  <h1 style="font-size:2em">考试速查 + 工具汇总</h1>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:11px;width:92%;margin-top:20px;text-align:left;opacity:0;animation:fadeUp .6s .15s ease forwards">
     <div class="card card-b">
-      <div class="cb bold sm" style="margin-bottom:7px">数据类型</div>
+      <div class="cb bold sm" style="margin-bottom:6px">数据结构</div>
       <ul>
-        <li>set() 空集合，{} 空字典</li>
-        <li>集合：无序、去重、不能索引</li>
-        <li>不可变类型才能做 dict 的 key</li>
-        <li>字典元素无序，不支持下标</li>
+        <li>set()空集合 / {}空字典</li>
+        <li>集合无序无重复不能索引</li>
+        <li>不可变类型才能做dict key</li>
+        <li>sort()改原 / sorted()返新</li>
       </ul>
     </div>
     <div class="card card-g">
-      <div class="cg bold sm" style="margin-bottom:7px">列表进阶</div>
+      <div class="cg bold sm" style="margin-bottom:6px">输入 / 输出 / 运算</div>
       <ul>
-        <li>sort() 改原列表 / sorted() 返新列表</li>
-        <li>s[i:j:k] — stop 不含，k 是步长</li>
-        <li>[i for i in range() if ...] 推导式</li>
-        <li>s[::2] 取偶数下标；s[::-1] 倒序</li>
+        <li>input()永远返回字符串</li>
+        <li>用 int(input()) 转整数</li>
+        <li>%.2f 保留2位小数</li>
+        <li>x**(1/2) 开方</li>
       </ul>
     </div>
-    <div class="card card-y">
-      <div class="cy bold sm" style="margin-bottom:7px">程序设计</div>
+    <div class="card card-r">
+      <div class="cr bold sm" style="margin-bottom:6px">改错题重点</div>
       <ul>
-        <li>input() 括号内绝对不加提示文字</li>
-        <li>有小数输出：%.2f</li>
-        <li>用到三角函数：from math import sin,cos</li>
-        <li>x**(1/2) 开方，x**(1/3) 立方根</li>
+        <li>= 赋值 vs == 比较</li>
+        <li>IndexError → 下标越界</li>
+        <li>TypeError → 类型不匹配</li>
+        <li>int()不能直接转"3.14"</li>
       </ul>
     </div>
     <div class="card card-t">
-      <div class="ct bold sm" style="margin-bottom:7px">AI 工具</div>
+      <div class="ct bold sm" style="margin-bottom:6px">DeepSeek-TUI</div>
       <ul>
-        <li>DeepSeek-TUI：npm install -g deepseek-tui</li>
-        <li>三种模式：Plan / Agent / YOLO</li>
-        <li>opencode：curl 一键安装，多模型</li>
-        <li>都需要 DEEPSEEK_API_KEY</li>
+        <li>npm install -g deepseek-tui</li>
+        <li>Plan / Agent / YOLO 三模式</li>
+        <li>需要 DEEPSEEK_API_KEY</li>
+        <li>费用极低，约¥2/百万token</li>
+      </ul>
+    </div>
+    <div class="card card-b">
+      <div class="cb bold sm" style="margin-bottom:6px">opencode</div>
+      <ul>
+        <li>curl 一键安装</li>
+        <li>支持多种AI模型</li>
+        <li>原项目归档，后续叫Crush</li>
+      </ul>
+    </div>
+    <div class="card card-p">
+      <div class="cp bold sm" style="margin-bottom:6px">资源</div>
+      <ul>
+        <li>github.com/trending/python</li>
+        <li>jackfrued/Python-100-Days</li>
+        <li>notebooklm.google.com</li>
+        <li>platform.deepseek.com</li>
       </ul>
     </div>
   </div>
 </div>
 </section>
-
 
 </div></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.0/reveal.min.js"></script>
@@ -1301,10 +1711,7 @@ Reveal.initialize({
   center:false,slideNumber:true,width:1280,height:720,margin:.03
 });
 function hlAll(){document.querySelectorAll('pre code:not([data-highlighted])').forEach(el=>hljs.highlightElement(el))}
-function stgOn(){
-  const s=Reveal.getCurrentSlide();
-  s.querySelectorAll('.stg').forEach(el=>el.classList.add('on'));
-}
+function stgOn(){Reveal.getCurrentSlide().querySelectorAll('.stg').forEach(el=>el.classList.add('on'))}
 Reveal.on('ready',()=>{hlAll();stgOn()});
 Reveal.on('slidechanged',()=>{hlAll();stgOn()});
 </script>

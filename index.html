@@ -171,14 +171,6 @@ h2.ul{border-bottom:1px solid var(--border);padding-bottom:8px;margin-bottom:16p
 <div class="reveal"><div class="slides">
 
 <!-- ══ TITLE ══ -->
-<section>
-<div class="title">
-  <div style="font-size:13em;font-weight:900;color:#111115;position:absolute;right:-30px;top:50%;transform:translateY(-50%)">PY</div>
-  <h1>Python — 新知识点</h1>
-  <h3 class="cm">约 36 张幻灯片 &nbsp;·&nbsp; 预计 60 分钟</h3>
-</div>
-</section>
-
 <!-- ══ SEC 01 ══ -->
 <section>
 <div class="sec">
@@ -195,38 +187,46 @@ h2.ul{border-bottom:1px solid var(--border);padding-bottom:8px;margin-bottom:16p
 <h2 class="ul">可变 vs 不可变</h2>
 <div class="g2">
   <div class="card card-r">
-    <div class="cr bold sm" style="margin-bottom:9px">不可变 — 创建后无法修改</div>
+    <div class="cr bold sm" style="margin-bottom:8px">不可变 — 创建后无法修改</div>
     <ul>
-      <li><span class="cb bold">int / float</span> &nbsp; 数字</li>
-      <li><span class="cb bold">str</span> &nbsp; 字符串 &nbsp;<code class="il">s="hello"</code></li>
-      <li><span class="cb bold">tuple</span> &nbsp; 元组 &nbsp;<code class="il">t=(1,2)</code></li>
+      <li><span class="cb bold">int / float</span> &nbsp; 数字 &nbsp;<code class="il">x = 10</code></li>
+      <li><span class="cb bold">str</span> &nbsp; 字符串 &nbsp;<code class="il">s = "hello"</code></li>
+      <li><span class="cb bold">tuple</span> &nbsp; 元组 &nbsp;<code class="il">t = (1, 2)</code></li>
     </ul>
-    <div class="tip r" style="margin-top:9px">不可变类型 <b>才能</b> 作为字典的 key</div>
+    <pre style="margin-top:8px"><code class="language-python">t = (1, 2, 3)
+t[0] = 99   # TypeError! 不能修改
+s = "hello"
+s[0] = "H"  # TypeError! 字符串也不能改</code></pre>
+    <div class="tip r" style="margin-top:6px">不可变类型 <b>才能</b> 作为字典的 key</div>
   </div>
   <div class="card card-g">
-    <div class="cg bold sm" style="margin-bottom:9px">可变 — 创建后可以修改</div>
+    <div class="cg bold sm" style="margin-bottom:8px">可变 — 创建后可以修改</div>
     <ul>
-      <li><span class="cb bold">list</span> &nbsp; 列表 &nbsp;<code class="il">[1,2,3]</code></li>
-      <li><span class="cb bold">dict</span> &nbsp; 字典 &nbsp;<code class="il">{"a":1}</code></li>
-      <li><span class="cb bold">set</span> &nbsp;&nbsp; 集合 &nbsp;<code class="il">{1,2,3}</code></li>
+      <li><span class="cb bold">list</span> &nbsp; 列表 &nbsp;<code class="il">[1, 2, 3]</code></li>
+      <li><span class="cb bold">dict</span> &nbsp; 字典 &nbsp;<code class="il">{"a": 1}</code></li>
+      <li><span class="cb bold">set</span> &nbsp;&nbsp; 集合 &nbsp;<code class="il">{1, 2, 3}</code></li>
     </ul>
-    <div class="tip r" style="margin-top:9px">可变类型 <b>不能</b> 作为字典的 key</div>
+    <pre style="margin-top:8px"><code class="language-python">lst = [1, 2, 3]
+lst[0] = 99   # 没问题，可以改
+lst.append(4) # 可以增加元素
+d = {"a":1}
+d["b"] = 2    # 可以新增 key</code></pre>
+    <div class="tip r" style="margin-top:6px">可变类型 <b>不能</b> 作为字典的 key</div>
   </div>
 </div>
-<div class="gap"></div>
-<div class="card fragment">
+<div class="card" style="margin-top:11px">
   <table class="t">
-    <tr><th>类型</th><th>可变</th><th>有序</th><th>可重复</th><th>下标索引</th><th>作 dict key</th></tr>
-    <tr><td><b>list</b></td><td class="cg">是</td><td class="cg">是</td><td class="cg">是</td><td class="cg">是</td><td class="cr">否</td></tr>
-    <tr><td><b>tuple</b></td><td class="cr">否</td><td class="cg">是</td><td class="cg">是</td><td class="cg">是</td><td class="cg">是</td></tr>
-    <tr><td><b>dict</b></td><td class="cg">是</td><td class="cm">无序</td><td>key唯一</td><td>key访问</td><td>—</td></tr>
-    <tr><td><b>set</b></td><td class="cg">是</td><td class="cr">无序</td><td class="cr">否</td><td class="cr">否</td><td>—</td></tr>
-    <tr><td><b>str</b></td><td class="cr">否</td><td class="cg">是</td><td class="cg">是</td><td class="cg">是</td><td class="cg">是</td></tr>
+    <tr><th>类型</th><th>可变</th><th>有序</th><th>可重复</th><th>下标索引</th><th>作 dict key</th><th>序列类型</th></tr>
+    <tr><td><b>list</b></td><td class="cg">是</td><td class="cg">是</td><td class="cg">是</td><td class="cg">是</td><td class="cr">否</td><td class="cg">是</td></tr>
+    <tr><td><b>tuple</b></td><td class="cr">否</td><td class="cg">是</td><td class="cg">是</td><td class="cg">是</td><td class="cg">是</td><td class="cg">是</td></tr>
+    <tr><td><b>dict</b></td><td class="cg">是</td><td class="cm">无序</td><td>key唯一</td><td>key访问</td><td>—</td><td class="cr">否</td></tr>
+    <tr><td><b>set</b></td><td class="cg">是</td><td class="cr">无序</td><td class="cr">否</td><td class="cr">否</td><td>—</td><td class="cr">否</td></tr>
+    <tr><td><b>str</b></td><td class="cr">否</td><td class="cg">是</td><td class="cg">是</td><td class="cg">是</td><td class="cg">是</td><td class="cg">是</td></tr>
   </table>
 </div>
-<div class="tip fragment r">
-  <b>单选：</b>Python序列类型不包括 &rarr; <b>字典</b>&nbsp;&nbsp;
-  <b>单选：</b>不是Python类型名的是 &rarr; <b>实数</b>
+<div class="tip r" style="margin-top:8px">
+  <b>单选：</b>Python序列类型不包括哪个 &rarr; <b>字典</b>（字典不是序列）&nbsp;&nbsp;
+  <b>单选：</b>不是Python数据类型名的是 &rarr; <b>实数</b>（Python里是 float，没有"实数"这个名字）
 </div>
 </div>
 </section>
@@ -254,40 +254,48 @@ s2 = set([1, 2, 3])
 # 自动去重
 a = set([1, 2, 3, 3, 4, 4, 4])
 print(a)        # {1, 2, 3, 4}
-print(sum(a))   # 10
+print(sum(a))   # 10  ← 只加一次每个值
 
-# 集合运算
+# 四种集合运算
 s1 = {1, 2, 3, 4}
 s2 = {3, 4, 5, 6}
-print(s1 | s2)              # {1,2,3,4,5,6}  并集
-print(s1 & s2)              # {3,4}           交集
-print(s1.intersection(s2))  # {3,4}  等价</code></pre>
+print(s1 | s2)   # {1,2,3,4,5,6}  并集
+print(s1 & s2)   # {3,4}           交集
+print(s1 - s2)   # {1,2}           差集（s1有s2没有）
+print(s1 ^ s2)   # {1,2,5,6}       对称差（只在一边）
+
+# 等价写法
+s1.intersection(s2)       # 同 s1 & s2
+s1.union(s2)              # 同 s1 | s2
+s1.difference(s2)         # 同 s1 - s2</code></pre>
 </div>
-<div class="stg">
-  <div class="card card-r">
-    <div class="cr bold sm">最大陷阱</div>
-    <div class="gap"></div>
-    <div class="vs" style="grid-template-columns:1fr 20px 1fr;align-items:center">
-      <div style="text-align:center">
-        <code class="il" style="font-size:1.05em">set()</code>
+<div>
+  <div class="card card-r" style="margin-bottom:9px">
+    <div class="cr bold sm" style="margin-bottom:8px">最大陷阱：空集合怎么写</div>
+    <div style="display:grid;grid-template-columns:1fr 16px 1fr;gap:8px;align-items:center">
+      <div style="text-align:center;background:#0d1f15;border:1px solid #145228;border-radius:8px;padding:10px">
+        <code class="il" style="font-size:1em">set()</code>
         <div class="cg sm" style="margin-top:5px">空集合</div>
       </div>
-      <div class="vs-mid" style="padding-top:0">vs</div>
-      <div style="text-align:center">
-        <code class="il" style="font-size:1.05em">{}</code>
-        <div class="cr sm" style="margin-top:5px">空字典，不是集合！</div>
+      <div style="text-align:center;font-size:.65em;font-weight:700;color:var(--border2)">vs</div>
+      <div style="text-align:center;background:#180808;border:1px solid #7f1d1d;border-radius:8px;padding:10px">
+        <code class="il" style="font-size:1em">{}</code>
+        <div class="cr sm" style="margin-top:5px">空字典！</div>
       </div>
     </div>
   </div>
-  <div class="card" style="margin-top:9px">
-    <div class="cb bold sm" style="margin-bottom:6px">集合不支持下标</div>
-    <pre style="margin:0"><code class="language-python">s = {1, 2, 3}
-# s[0]  ← TypeError!
-# 集合无序，没有"第一个"</code></pre>
+  <div class="card" style="margin-bottom:9px">
+    <div class="cb bold sm" style="margin-bottom:6px">集合不支持下标，无序</div>
+    <pre style="margin:0"><code class="language-python">s = {3, 1, 4, 1, 5}
+print(s)    # {1, 3, 4, 5}  顺序可能不同
+# s[0]  ← TypeError: 集合无索引
+# 只能用 for x in s: 遍历</code></pre>
   </div>
-  <div class="tip r" style="margin-top:7px">
-    判断：集合是有序的 &rarr; <b>错</b>&nbsp;&nbsp;
-    判断：set()表示空集合 &rarr; <b class="cg">对</b>
+  <div class="tip r">
+    判断：集合是有序的 &rarr; <b>错</b><br>
+    判断：s=set()表示空集合 &rarr; <b class="cg">对</b><br>
+    判断：s1&s2 与 s1.intersection(s2) 等价 &rarr; <b class="cg">对</b><br>
+    单选：set([1,2,3,3,4,4,4])的sum &rarr; <b class="cg">10</b>
   </div>
 </div>
 </div>
@@ -331,19 +339,34 @@ print(a)  # [5, 1, 3, 4]
 #              ↑ 原来没变！</code></pre>
   </div>
 </div>
-<div class="gap"></div>
-<div class="g2 fragment">
+<div class="g2" style="margin-top:10px">
   <div class="card">
     <table class="t">
       <tr><th></th><th>sort()</th><th>sorted()</th></tr>
       <tr><td>改原列表</td><td class="cr">是</td><td class="cg">否</td></tr>
       <tr><td>返回值</td><td class="cr">None</td><td class="cg">新列表</td></tr>
-      <tr><td>降序</td><td colspan="2" style="text-align:center">reverse=True</td></tr>
+      <tr><td>降序参数</td><td colspan="2" style="text-align:center">reverse=True</td></tr>
+      <tr><td>可用于</td><td>仅list</td><td>任意可迭代对象</td></tr>
     </table>
+    <pre style="margin-top:8px"><code class="language-python"># reverse() 是原地翻转，不是排序！
+a = [3, 1, 4]
+a.reverse()      # [4, 1, 3]  仅倒序
+a.sort()         # [1, 3, 4]  升序排列</code></pre>
   </div>
-  <div class="tip r">
-    <b>判断：</b>sort()与sorted()都会改变原列表 &rarr; <b>错</b><br>
-    <b>单选：</b>sorted([5,1,3,4],reverse=True) &rarr; <b class="cg">[5,4,3,1]</b>
+  <div>
+    <div class="tip r" style="margin-bottom:8px">
+      <b>判断：</b>sort()与sorted()都会改变原列表 &rarr; <b>错</b><br>
+      <b>判断：</b>sort()和sorted()都能改变元素位置 &rarr; <b>错</b>（sorted不改原列表）<br>
+      <b>单选：</b>sorted([5,1,3,4],reverse=True) &rarr; <b class="cg">[5,4,3,1]</b>
+    </div>
+    <div class="card card-y">
+      <div class="cy bold sm" style="margin-bottom:6px">逆序 vs 降序 — 常考混淆</div>
+      <pre style="margin:0"><code class="language-python">a = [3, 1, 4, 1, 5]
+a.sort(reverse=True)  # [5,4,3,1,1] 降序
+a.reverse()           # [1,1,3,4,5] 仅翻转顺序
+# 题目说"逆序输出"→ reverse()
+# 题目说"降序排列"→ sort(reverse=True)</code></pre>
+    </div>
   </div>
 </div>
 </div>
@@ -360,30 +383,47 @@ print(a)  # [5, 1, 3, 4]
 print(s[1:4:2])  # ['gold', 'brown']  ← 下标 1,3
 print(s[1:3])    # ['gold', 'pink']   ← 下标 1,2
 print(s[::-1])   # 整个列表倒序</code></pre>
-<div class="gap"></div>
-<div class="g3 stg">
+<div class="g4" style="margin-top:10px">
   <div class="card">
     <div class="cb bold sm">stop 不含该位置</div>
     <pre style="margin-top:7px"><code class="language-python">s[1:4]
-# 取 1,2,3
-# 不含 4</code></pre>
+# 取下标 1,2,3
+# 不含 4
+s[1:4:2]
+# 取下标 1,3
+# 步长为2跳着取</code></pre>
   </div>
   <div class="card">
     <div class="cb bold sm">step 控制步长</div>
     <pre style="margin-top:7px"><code class="language-python">lst = [1,2,3,4,5,6]
-lst[::2]
-# [1,3,5] ← 下标0,2,4</code></pre>
+lst[::2]   # [1,3,5]
+# 下标 0,2,4
+lst[1::2]  # [2,4,6]
+# 下标 1,3,5</code></pre>
   </div>
   <div class="card">
     <div class="cb bold sm">负数切片</div>
     <pre style="margin-top:7px"><code class="language-python">lst[0:-2]
 # [1,2,3,4]
-# 去掉最后两个</code></pre>
+# 去掉最后两个
+lst[-3:]
+# [4,5,6]
+# 最后三个</code></pre>
+  </div>
+  <div class="card">
+    <div class="cb bold sm">倒序 step=-1</div>
+    <pre style="margin-top:7px"><code class="language-python">lst[::-1]
+# [6,5,4,3,2,1]
+# 整个列表倒序
+t=("a","b","c")
+t[::-1]
+# ('c','b','a')</code></pre>
   </div>
 </div>
-<div class="tip fragment">
-  <b>单选：</b>s[1:4:2] &rarr; <b class="cg">['gold','brown']</b>&nbsp;&nbsp;
-  <b>判断：</b>lst[::2]取偶数下标元素 &rarr; <b class="cg">对</b>
+<div class="tip" style="margin-top:8px">
+  <b>单选：</b>s[1:4:2] &rarr; <b class="cg">['gold','brown']</b>（下标1,3）&nbsp;&nbsp;
+  <b>判断：</b>lst[::2]取偶数下标元素 &rarr; <b class="cg">对</b>&nbsp;&nbsp;
+  <b>单选：</b>切片操作 lst[start,stop,step] 的正确写法 &rarr; <b class="cg">s[i:j:k]</b>
 </div>
 </div>
 </section>
@@ -401,20 +441,48 @@ result = [i for i in range(15) if i % 5 == 0]
 # 字符串拆分转整数（大题常用）
 lst = input().split(",")
 lst = [int(i) for i in lst]</code></pre>
-<div class="gap"></div>
-<div class="g2">
-  <div class="card fragment">
-    <div class="cb bold sm" style="margin-bottom:8px">语法结构</div>
-    <div style="font-size:.82em;line-height:2.2">
+<div class="g2" style="margin-top:10px">
+  <div class="card">
+    <div class="cb bold sm" style="margin-bottom:8px">语法结构 + 更多例子</div>
+    <div style="font-size:.79em;line-height:2">
       <code class="il">[</code> <span class="cg bold">表达式</span> <code class="il">for</code>
       <span class="cb bold">变量</span> <code class="il">in</code>
       <span class="cp bold">可迭代对象</span> <code class="il">if</code>
       <span class="cy bold">条件</span> <code class="il">]</code>
     </div>
+    <pre style="margin-top:6px"><code class="language-python"># 被5整除（注意包含0）
+[i for i in range(15) if i%5==0]
+# [0, 5, 10]
+
+# 奇数位变成平方，偶数位不变
+lst = [1,2,3,4,5,6]
+for i in range(len(lst)):
+    if lst[i] % 2 == 1:
+        lst[i] = lst[i]**2
+# [1,2,9,4,25,6]
+
+# 字符串转整数（split大题常用）
+lst = [int(i) for i in "1,2,3,4".split(",")]
+# [1, 2, 3, 4]</code></pre>
   </div>
-  <div class="tip r fragment">
-    <b>单选：</b>[i for i in range(15) if i%5==0]<br>
-    A.[5,10] B.[0,5,10,15] C.[5,10,15] <b class="cg">D.[0,5,10]</b>
+  <div>
+    <div class="tip r" style="margin-bottom:8px">
+      <b>单选：</b>[i for i in range(15) if i%5==0]<br>
+      A.[5,10] &nbsp; B.[0,5,10,15] &nbsp; C.[5,10,15] &nbsp;<b class="cg">D.[0,5,10]</b>
+    </div>
+    <div class="card card-y">
+      <div class="cy bold sm" style="margin-bottom:6px">推导式 vs for循环</div>
+      <pre style="margin:0"><code class="language-python"># 两种写法完全等价
+# 推导式写法（一行）
+result = [i**2 for i in range(5)]
+
+# 普通循环写法
+result = []
+for i in range(5):
+    result.append(i**2)
+
+# 结果都是 [0,1,4,9,16]</code></pre>
+    </div>
   </div>
 </div>
 </div>
@@ -642,15 +710,22 @@ while True:
     else:
         print("输入有误！")</code></pre>
 </div>
-<div class="stg">
-  <div class="card card-b">
+<div>
+  <div class="card card-b" style="margin-bottom:9px">
     <div class="cb bold sm" style="margin-bottom:7px">for...else 关键点</div>
     <div style="font-size:.78em;color:var(--muted);line-height:1.8">
       循环被 <code class="il">break</code> 打断 &rarr; <span class="cr">else 不执行</span><br>
-      循环正常跑完 &rarr; <span class="cg">else 执行</span>
+      循环正常跑完（没有break）&rarr; <span class="cg">else 才执行</span>
     </div>
+    <pre style="margin-top:7px"><code class="language-python">for i in range(3):
+    uname = input()
+    if uname == "admin":
+        print("登录成功！")
+        break       # ← break了，else不执行
+else:
+    print("三次均失败")</code></pre>
   </div>
-  <div class="card card-y" style="margin-top:9px">
+  <div class="card card-y">
     <div class="cy bold sm" style="margin-bottom:7px">while 持续输入模式</div>
     <pre style="margin:0"><code class="language-python">lst = []
 while True:
@@ -658,7 +733,14 @@ while True:
     if x == 'q':
         break
     lst.append(int(x))
-print(lst)</code></pre>
+print(lst)
+
+# 另一常见模式：验证范围
+while True:
+    n = int(input())
+    if 1 <= n <= 100:
+        break
+    print("输入有误！")</code></pre>
   </div>
 </div>
 </div>
@@ -692,17 +774,30 @@ while True:
 </div>
 <div>
   <div class="card" style="margin-bottom:9px">
-    <div class="cb bold sm" style="margin-bottom:9px">常用 ASCII 值</div>
+    <div class="cb bold sm" style="margin-bottom:8px">常用 ASCII 值</div>
     <table class="t">
       <tr><th>字符</th><th>数字</th><th>字符</th><th>数字</th></tr>
-      <tr><td>'A'</td><td>65</td><td>'a'</td><td>97</td></tr>
-      <tr><td>'Z'</td><td>90</td><td>'z'</td><td>122</td></tr>
-      <tr><td>'0'</td><td>48</td><td>'9'</td><td>57</td></tr>
+      <tr><td>'A'~'Z'</td><td>65~90</td><td>'a'~'z'</td><td>97~122</td></tr>
+      <tr><td>'0'~'9'</td><td>48~57</td><td>' '(空格)</td><td>32</td></tr>
     </table>
+  </div>
+  <div class="card card-b" style="margin-bottom:9px">
+    <div class="cb bold sm" style="margin-bottom:6px">大小写转换（不用方法）</div>
+    <pre style="margin:0"><code class="language-python"># 大写转小写：加32
+c = 'A'
+lower = chr(ord(c) + 32)  # 'a'
+
+# 小写转大写：减32
+c = 'z'
+upper = chr(ord(c) - 32)  # 'Z'
+
+# 判断是否是字母
+65 <= ord(c) <= 90   # 大写字母
+97 <= ord(c) <= 122  # 小写字母</code></pre>
   </div>
   <div class="tip r">
     <b>记忆：</b>大写A=65，小写a=97，差32<br>
-    ord('a')=97，chr(97)='a'，互为逆运算
+    <b>考题：</b>ord('a')=97，chr(97)='a'，互为逆运算
   </div>
 </div>
 </div>
@@ -742,24 +837,29 @@ f = m % 10              # 取分位
 print("%d元%d角%d分" % (y, j, f))
 # 输入 23 → 0元2角3分</code></pre>
 </div>
-<div class="stg">
-  <div class="card">
+<div>
+  <div class="card" style="margin-bottom:9px">
     <div class="cb bold sm" style="margin-bottom:7px">公式转换对照</div>
     <table class="t" style="font-size:.71em">
-      <tr><th>数学</th><th>Python</th></tr>
+      <tr><th>数学写法</th><th>Python 写法</th></tr>
       <tr><td>x²</td><td><code class="il">x**2</code></td></tr>
       <tr><td>√x</td><td><code class="il">x**(1/2)</code> 或 <code class="il">x**0.5</code></td></tr>
       <tr><td>∛x</td><td><code class="il">x**(1/3)</code></td></tr>
-      <tr><td>sin(x)</td><td><code class="il">sin(x)</code>（需import）</td></tr>
+      <tr><td>a/b（分数线）</td><td><code class="il">(a) / (b)</code> 括号很重要</td></tr>
+      <tr><td>sin(x)</td><td><code class="il">sin(x)</code>（需 import）</td></tr>
+      <tr><td>保留2位小数</td><td><code class="il">print("%.2f" % n)</code></td></tr>
     </table>
   </div>
-  <div class="card card-r" style="margin-top:9px">
+  <div class="card card-r">
     <div class="cr bold sm" style="margin-bottom:6px">三个扣分点</div>
     <ul>
-      <li style="font-size:.78em">input() 括号内有提示信息</li>
+      <li style="font-size:.78em">input() 括号内有任何提示信息</li>
       <li style="font-size:.78em">忘写 from math import sin,cos</li>
-      <li style="font-size:.78em">结果没用 %.2f 保留小数</li>
+      <li style="font-size:.78em">结果没用 %.2f 保留两位小数</li>
     </ul>
+    <pre style="margin-top:7px"><code class="language-python"># 分数线必须加括号！
+# 错误：sin(x) + cos(y)-5*x / (x**2+1)**(1/2)
+# 正确：sin(x) + (cos(y)-5*x) / (x**2+1)**(1/2)</code></pre>
   </div>
 </div>
 </div>
@@ -853,14 +953,15 @@ print("%d元%d角%d分" % (y, j, f))
     <tr><td class="cr bold">IndentationError</td><td>缩进错误</td><td>Tab 和空格混用、if/for 后面缩进不一致</td></tr>
   </table>
 </div>
-<div class="g2 fragment">
+<div class="g2">
   <div class="card card-y">
-    <div class="cy bold sm" style="margin-bottom:7px">改错题拿分技巧</div>
+    <div class="cy bold sm" style="margin-bottom:7px">改错题拿分步骤</div>
     <ul>
       <li>先看报错类型，锁定问题范围</li>
-      <li>找 input() 有没有 int()/float()</li>
+      <li>找 input() 后面有没有 int()/float()</li>
       <li>找 = 是否写成了 == 或反过来</li>
-      <li>检查列表操作是否用对了方法</li>
+      <li>检查列表方法是否用对（index不是插入）</li>
+      <li>检查 range() 参数是否越界</li>
     </ul>
   </div>
   <div class="term">
@@ -984,12 +1085,17 @@ for i in range(3):
     </ul>
   </div>
 </div>
-<div class="gap"></div>
-<div class="card card-t fragment">
+<div class="card card-t" style="margin-top:10px">
   <div class="ct bold sm" style="margin-bottom:7px">关键区别：上下文感知</div>
-  <div style="font-size:.8em;color:var(--muted);line-height:1.7">
-    普通 ChatGPT：需要<b style="color:var(--text)">手动粘贴代码</b>，AI 不知道你有什么文件，不知道报错在哪行<br>
-    终端 AI 工具：<b style="color:var(--teal)">直接读取整个项目</b>，知道所有文件，上下文完整，精准定位问题
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;font-size:.78em">
+    <div>
+      <div class="cr bold" style="margin-bottom:5px">普通 ChatGPT</div>
+      <div style="color:var(--muted);line-height:1.7">手动复制粘贴代码<br>不知道你有哪些文件<br>不知道报错在哪行<br>每次都要重新解释背景</div>
+    </div>
+    <div>
+      <div class="ct bold" style="margin-bottom:5px">终端 AI 工具</div>
+      <div style="color:var(--muted);line-height:1.7">直接读取整个项目目录<br>知道所有文件的内容<br>精准定位报错行<br>上下文完整，一句话说清</div>
+    </div>
   </div>
 </div>
 </div>
